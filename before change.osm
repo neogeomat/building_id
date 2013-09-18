@@ -547,71 +547,79 @@
     <tag k='name' v='Lamo Galli' />
     <tag k='surface' v='paving_stones' />
   </way>
-  <way id='200393692' timestamp='2013-01-10T06:47:25Z' uid='1068220' user='Helina' visible='true' version='1' changeset='14594373'>
+  <way id='200393692' action='modify' timestamp='2013-01-10T06:47:25Z' uid='1068220' user='Helina' visible='true' version='1' changeset='14594373'>
     <nd ref='2103849027' />
     <nd ref='2103849034' />
     <nd ref='2103849032' />
     <nd ref='2103849026' />
     <nd ref='2103849027' />
     <tag k='building' v='yes' />
+    <tag k='kll:oid' v='null' />
   </way>
-  <way id='200563394' timestamp='2013-01-11T08:48:14Z' uid='1068220' user='Helina' visible='true' version='1' changeset='14607147'>
+  <way id='200563394' action='modify' timestamp='2013-01-11T08:48:14Z' uid='1068220' user='Helina' visible='true' version='1' changeset='14607147'>
     <nd ref='2105344990' />
     <nd ref='2105345000' />
     <nd ref='2105344993' />
     <nd ref='2105344988' />
     <nd ref='2105344990' />
     <tag k='building' v='yes' />
+    <tag k='kll:oid' v='null' />
   </way>
-  <way id='200563395' timestamp='2013-01-11T08:48:14Z' uid='1068220' user='Helina' visible='true' version='1' changeset='14607147'>
+  <way id='200563395' action='modify' timestamp='2013-01-11T08:48:14Z' uid='1068220' user='Helina' visible='true' version='1' changeset='14607147'>
     <nd ref='2105344999' />
     <nd ref='2105345010' />
     <nd ref='2105345009' />
     <nd ref='2105344997' />
     <nd ref='2105344999' />
     <tag k='building' v='yes' />
+    <tag k='kll:oid' v='null' />
   </way>
-  <way id='200563399' timestamp='2013-01-11T08:48:15Z' uid='1068220' user='Helina' visible='true' version='1' changeset='14607147'>
+  <way id='200563399' action='modify' timestamp='2013-01-11T08:48:15Z' uid='1068220' user='Helina' visible='true' version='1' changeset='14607147'>
     <nd ref='2105344968' />
     <nd ref='2105344982' />
     <nd ref='2105344981' />
     <nd ref='2105344966' />
     <nd ref='2105344968' />
     <tag k='building' v='yes' />
+    <tag k='kll:oid' v='null' />
   </way>
-  <way id='200563453' timestamp='2013-01-11T08:48:18Z' uid='1068220' user='Helina' visible='true' version='1' changeset='14607147'>
+  <way id='200563453' action='modify' timestamp='2013-01-11T08:48:18Z' uid='1068220' user='Helina' visible='true' version='1' changeset='14607147'>
     <nd ref='2105344941' />
     <nd ref='2105344926' />
     <nd ref='2105344930' />
     <nd ref='2105344943' />
     <nd ref='2105344941' />
     <tag k='building' v='yes' />
+    <tag k='kll:oid' v='null' />
   </way>
-  <way id='200563460' timestamp='2013-01-11T08:48:18Z' uid='1068220' user='Helina' visible='true' version='1' changeset='14607147'>
+  <way id='200563460' action='modify' timestamp='2013-01-11T08:48:18Z' uid='1068220' user='Helina' visible='true' version='1' changeset='14607147'>
     <nd ref='2105345017' />
     <nd ref='2105345016' />
     <nd ref='2105345003' />
     <nd ref='2105345005' />
     <nd ref='2105345017' />
     <tag k='building' v='yes' />
+    <tag k='kll:oid' v='null' />
   </way>
-  <way id='200563514' timestamp='2013-01-11T08:48:21Z' uid='1068220' user='Helina' visible='true' version='1' changeset='14607147'>
+  <way id='200563514' action='modify' timestamp='2013-01-11T08:48:21Z' uid='1068220' user='Helina' visible='true' version='1' changeset='14607147'>
     <nd ref='2105345004' />
     <nd ref='2105345015' />
     <nd ref='2105345012' />
     <nd ref='2105344998' />
     <nd ref='2105345004' />
     <tag k='building' v='yes' />
+    <tag k='kll:oid' v='null' />
   </way>
-  <way id='200563520' timestamp='2013-01-11T08:48:21Z' uid='1068220' user='Helina' visible='true' version='1' changeset='14607147'>
+  <way id='200563520' action='modify' timestamp='2013-01-11T08:48:21Z' uid='1068220' user='Helina' visible='true' version='1' changeset='14607147'>
     <nd ref='2105344939' />
     <nd ref='2105344916' />
     <nd ref='2105344922' />
     <nd ref='2105344941' />
     <nd ref='2105344939' />
     <tag k='building' v='yes' />
+    <tag k='kll:oid' v='null' />
   </way>
-  <way id='200563521' timestamp='2013-09-11T13:04:06Z' uid='1700096' user='GautamPratik' visible='true' version='2' changeset='17782732'>
+  <way id='200563521' action='modify' timestamp='2013-09-11T13:04:06Z' uid='1700096' user='GautamPratik' visible='true' version='2' changeset='17782732'>
     <nd ref='2454095465' />
     <nd ref='2454095462' />
     <nd ref='2454095435' />
@@ -623,30 +631,34 @@
     <nd ref='2105344991' />
     <nd ref='2454095465' />
     <tag k='building' v='yes' />
+    <tag k='kll:oid' v='null' />
   </way>
-  <way id='200563543' timestamp='2013-01-11T08:48:22Z' uid='1068220' user='Helina' visible='true' version='1' changeset='14607147'>
+  <way id='200563543' action='modify' timestamp='2013-01-11T08:48:22Z' uid='1068220' user='Helina' visible='true' version='1' changeset='14607147'>
     <nd ref='2105344947' />
     <nd ref='2105344956' />
     <nd ref='2105344954' />
     <nd ref='2105344945' />
     <nd ref='2105344947' />
     <tag k='building' v='yes' />
+    <tag k='kll:oid' v='null' />
   </way>
-  <way id='200563551' timestamp='2013-01-11T08:48:23Z' uid='1068220' user='Helina' visible='true' version='1' changeset='14607147'>
+  <way id='200563551' action='modify' timestamp='2013-01-11T08:48:23Z' uid='1068220' user='Helina' visible='true' version='1' changeset='14607147'>
     <nd ref='2105344975' />
     <nd ref='2105344986' />
     <nd ref='2105344983' />
     <nd ref='2105344973' />
     <nd ref='2105344975' />
     <tag k='building' v='yes' />
+    <tag k='kll:oid' v='null' />
   </way>
-  <way id='200563618' timestamp='2013-01-11T08:48:27Z' uid='1068220' user='Helina' visible='true' version='1' changeset='14607147'>
+  <way id='200563618' action='modify' timestamp='2013-01-11T08:48:27Z' uid='1068220' user='Helina' visible='true' version='1' changeset='14607147'>
     <nd ref='2105345007' />
     <nd ref='2105345018' />
     <nd ref='2105345014' />
     <nd ref='2105345001' />
     <nd ref='2105345007' />
     <tag k='building' v='yes' />
+    <tag k='kll:oid' v='null' />
   </way>
   <way id='216441228' timestamp='2013-08-26T10:20:56Z' uid='680067' user='amritkarma' visible='true' version='4' changeset='17513784'>
     <nd ref='2257863433' />
@@ -667,7 +679,7 @@
     <tag k='source' v='OpenDRI survey' />
     <tag k='student:count' v='300' />
   </way>
-  <way id='216441260' timestamp='2013-08-26T09:09:30Z' uid='680067' user='amritkarma' visible='true' version='3' changeset='17512496'>
+  <way id='216441260' action='modify' timestamp='2013-08-26T09:09:30Z' uid='680067' user='amritkarma' visible='true' version='3' changeset='17512496'>
     <nd ref='2257863452' />
     <nd ref='2257863470' />
     <nd ref='2257863448' />
@@ -682,6 +694,7 @@
     <tag k='building:ownership' v='rent' />
     <tag k='building:soft_storey' v='yes' />
     <tag k='building:structure' v='load_bearing_brick_wall_in_cement_mortar' />
+    <tag k='kll:oid' v='null' />
     <tag k='occupant:day' v='60' />
     <tag k='occupant:night' v='4' />
     <tag k='operator' v='Boston International High School' />
@@ -695,7 +708,7 @@
     <tag k='source' v='OpenDRI survey' />
     <tag k='start_date' v='1990-2000' />
   </way>
-  <way id='216441266' timestamp='2013-08-26T09:23:10Z' uid='680067' user='amritkarma' visible='true' version='3' changeset='17512496'>
+  <way id='216441266' action='modify' timestamp='2013-08-26T09:23:10Z' uid='680067' user='amritkarma' visible='true' version='3' changeset='17512496'>
     <nd ref='2257863438' />
     <nd ref='2257863441' />
     <nd ref='2257863463' />
@@ -713,6 +726,7 @@
     <tag k='building:soft_storey' v='no' />
     <tag k='building:structure' v='non_engineered_reinforced_concrete' />
     <tag k='floor:material' v='concrete' />
+    <tag k='kll:oid' v='null' />
     <tag k='occupant:day' v='260' />
     <tag k='occupant:night' v='0' />
     <tag k='operator' v='Boston International High School' />
@@ -726,135 +740,151 @@
     <tag k='source' v='OpenDRI survey' />
     <tag k='start_date' v='1990-2000' />
   </way>
-  <way id='237518686' timestamp='2013-09-11T12:46:06Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17782434'>
+  <way id='237518686' action='modify' timestamp='2013-09-11T12:46:06Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17782434'>
     <nd ref='2454082842' />
     <nd ref='2454082851' />
     <nd ref='2454082844' />
     <nd ref='2454082836' />
     <nd ref='2454082842' />
     <tag k='building' v='yes' />
+    <tag k='kll:oid' v='null' />
   </way>
-  <way id='237518692' timestamp='2013-09-11T12:46:07Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17782434'>
+  <way id='237518692' action='modify' timestamp='2013-09-11T12:46:07Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17782434'>
     <nd ref='2454082809' />
     <nd ref='2454082801' />
     <nd ref='2454082783' />
     <nd ref='2454082797' />
     <nd ref='2454082809' />
     <tag k='building' v='yes' />
+    <tag k='kll:oid' v='null' />
   </way>
-  <way id='237518694' timestamp='2013-09-11T12:46:07Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17782434'>
+  <way id='237518694' action='modify' timestamp='2013-09-11T12:46:07Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17782434'>
     <nd ref='2454082838' />
     <nd ref='2454082832' />
     <nd ref='2454082819' />
     <nd ref='2454082823' />
     <nd ref='2454082838' />
     <tag k='building' v='yes' />
+    <tag k='kll:oid' v='null' />
   </way>
-  <way id='237518697' timestamp='2013-09-11T12:46:07Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17782434'>
+  <way id='237518697' action='modify' timestamp='2013-09-11T12:46:07Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17782434'>
     <nd ref='2454082826' />
     <nd ref='2454082822' />
     <nd ref='2454082805' />
     <nd ref='2454082811' />
     <nd ref='2454082826' />
     <tag k='building' v='yes' />
+    <tag k='kll:oid' v='null' />
   </way>
-  <way id='237518701' timestamp='2013-09-11T12:46:07Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17782434'>
+  <way id='237518701' action='modify' timestamp='2013-09-11T12:46:07Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17782434'>
     <nd ref='2454082796' />
     <nd ref='2454082764' />
     <nd ref='2454082779' />
     <nd ref='2454082802' />
     <nd ref='2454082796' />
     <tag k='building' v='yes' />
+    <tag k='kll:oid' v='null' />
   </way>
-  <way id='237518702' timestamp='2013-09-11T12:46:07Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17782434'>
+  <way id='237518702' action='modify' timestamp='2013-09-11T12:46:07Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17782434'>
     <nd ref='2454082794' />
     <nd ref='2454082780' />
     <nd ref='2454082766' />
     <nd ref='2454082774' />
     <nd ref='2454082794' />
     <tag k='building' v='yes' />
+    <tag k='kll:oid' v='null' />
   </way>
-  <way id='237518704' timestamp='2013-09-11T12:46:07Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17782434'>
+  <way id='237518704' action='modify' timestamp='2013-09-11T12:46:07Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17782434'>
     <nd ref='2454082850' />
     <nd ref='2454082846' />
     <nd ref='2454082833' />
     <nd ref='2454082837' />
     <nd ref='2454082850' />
     <tag k='building' v='yes' />
+    <tag k='kll:oid' v='null' />
   </way>
-  <way id='237518705' timestamp='2013-09-11T12:46:07Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17782434'>
+  <way id='237518705' action='modify' timestamp='2013-09-11T12:46:07Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17782434'>
     <nd ref='2454082813' />
     <nd ref='2454082807' />
     <nd ref='2454082793' />
     <nd ref='2454082798' />
     <nd ref='2454082813' />
     <tag k='building' v='yes' />
+    <tag k='kll:oid' v='null' />
   </way>
-  <way id='237518711' timestamp='2013-09-11T12:46:08Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17782434'>
+  <way id='237518711' action='modify' timestamp='2013-09-11T12:46:08Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17782434'>
     <nd ref='2454082858' />
     <nd ref='2454082855' />
     <nd ref='2454082849' />
     <nd ref='2454082853' />
     <nd ref='2454082858' />
     <tag k='building' v='yes' />
+    <tag k='kll:oid' v='null' />
   </way>
-  <way id='237518712' timestamp='2013-09-11T12:46:08Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17782434'>
+  <way id='237518712' action='modify' timestamp='2013-09-11T12:46:08Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17782434'>
     <nd ref='2454082785' />
     <nd ref='2454082771' />
     <nd ref='2454082734' />
     <nd ref='2454082745' />
     <nd ref='2454082785' />
     <tag k='building' v='yes' />
+    <tag k='kll:oid' v='null' />
   </way>
-  <way id='237518716' timestamp='2013-09-11T12:46:08Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17782434'>
+  <way id='237518716' action='modify' timestamp='2013-09-11T12:46:08Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17782434'>
     <nd ref='2454082761' />
     <nd ref='2454082728' />
     <nd ref='2454082739' />
     <nd ref='2454082770' />
     <nd ref='2454082761' />
     <tag k='building' v='yes' />
+    <tag k='kll:oid' v='null' />
   </way>
-  <way id='237518718' timestamp='2013-09-11T12:46:08Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17782434'>
+  <way id='237518718' action='modify' timestamp='2013-09-11T12:46:08Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17782434'>
     <nd ref='2454082830' />
     <nd ref='2454082821' />
     <nd ref='2454082789' />
     <nd ref='2454082800' />
     <nd ref='2454082830' />
     <tag k='building' v='yes' />
+    <tag k='kll:oid' v='null' />
   </way>
-  <way id='237518719' timestamp='2013-09-11T12:46:08Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17782434'>
+  <way id='237518719' action='modify' timestamp='2013-09-11T12:46:08Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17782434'>
     <nd ref='2454082820' />
     <nd ref='2454082815' />
     <nd ref='2454082769' />
     <nd ref='2454082787' />
     <nd ref='2454082820' />
     <tag k='building' v='yes' />
+    <tag k='kll:oid' v='null' />
   </way>
-  <way id='237518721' timestamp='2013-09-11T12:46:08Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17782434'>
+  <way id='237518721' action='modify' timestamp='2013-09-11T12:46:08Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17782434'>
     <nd ref='2454082856' />
     <nd ref='2454082854' />
     <nd ref='2454082843' />
     <nd ref='2454082845' />
     <nd ref='2454082856' />
     <tag k='building' v='yes' />
+    <tag k='kll:oid' v='null' />
   </way>
-  <way id='237518723' timestamp='2013-09-11T12:46:08Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17782434'>
+  <way id='237518723' action='modify' timestamp='2013-09-11T12:46:08Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17782434'>
     <nd ref='2454082839' />
     <nd ref='2454082848' />
     <nd ref='2454082840' />
     <nd ref='2454082827' />
     <nd ref='2454082839' />
     <tag k='building' v='yes' />
+    <tag k='kll:oid' v='null' />
   </way>
-  <way id='237518724' timestamp='2013-09-11T12:46:08Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17782434'>
+  <way id='237518724' action='modify' timestamp='2013-09-11T12:46:08Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17782434'>
     <nd ref='2454082772' />
     <nd ref='2454082760' />
     <nd ref='2454082743' />
     <nd ref='2454082751' />
     <nd ref='2454082772' />
     <tag k='building' v='yes' />
+    <tag k='kll:oid' v='null' />
   </way>
-  <way id='237518732' timestamp='2013-09-11T12:46:09Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17782434'>
+  <way id='237518732' action='modify' timestamp='2013-09-11T12:46:09Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17782434'>
     <nd ref='2454082834' />
     <nd ref='2454082828' />
     <nd ref='2454082816' />
@@ -863,8 +893,9 @@
     <nd ref='2454082812' />
     <nd ref='2454082834' />
     <tag k='building' v='yes' />
+    <tag k='kll:oid' v='null' />
   </way>
-  <way id='237518737' timestamp='2013-09-11T12:46:09Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17782434'>
+  <way id='237518737' action='modify' timestamp='2013-09-11T12:46:09Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17782434'>
     <nd ref='2454082795' />
     <nd ref='2454082788' />
     <nd ref='2454082752' />
@@ -873,8 +904,9 @@
     <nd ref='2454082781' />
     <nd ref='2454082795' />
     <tag k='building' v='yes' />
+    <tag k='kll:oid' v='null' />
   </way>
-  <way id='237518739' timestamp='2013-09-11T12:46:09Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17782434'>
+  <way id='237518739' action='modify' timestamp='2013-09-11T12:46:09Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17782434'>
     <nd ref='2454082775' />
     <nd ref='2454082786' />
     <nd ref='2454082814' />
@@ -883,56 +915,63 @@
     <nd ref='2454082763' />
     <nd ref='2454082775' />
     <tag k='building' v='yes' />
+    <tag k='kll:oid' v='null' />
   </way>
-  <way id='237520001' timestamp='2013-09-11T13:04:04Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17782732'>
+  <way id='237520001' action='modify' timestamp='2013-09-11T13:04:04Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17782732'>
     <nd ref='2454095476' />
     <nd ref='2454095472' />
     <nd ref='2454095452' />
     <nd ref='2454095457' />
     <nd ref='2454095476' />
     <tag k='building' v='yes' />
+    <tag k='kll:oid' v='null' />
   </way>
-  <way id='237520003' timestamp='2013-09-11T13:04:04Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17782732'>
+  <way id='237520003' action='modify' timestamp='2013-09-11T13:04:04Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17782732'>
     <nd ref='2454095451' />
     <nd ref='2454095470' />
     <nd ref='2454095463' />
     <nd ref='2454095447' />
     <nd ref='2454095451' />
     <tag k='building' v='yes' />
+    <tag k='kll:oid' v='null' />
   </way>
-  <way id='237520010' timestamp='2013-09-11T13:04:04Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17782732'>
+  <way id='237520010' action='modify' timestamp='2013-09-11T13:04:04Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17782732'>
     <nd ref='2454095475' />
     <nd ref='2454095471' />
     <nd ref='2454095458' />
     <nd ref='2454095461' />
     <nd ref='2454095475' />
     <tag k='building' v='yes' />
+    <tag k='kll:oid' v='null' />
   </way>
-  <way id='237520014' timestamp='2013-09-11T13:04:05Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17782732'>
+  <way id='237520014' action='modify' timestamp='2013-09-11T13:04:05Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17782732'>
     <nd ref='2454095466' />
     <nd ref='2454095456' />
     <nd ref='2454095426' />
     <nd ref='2454095445' />
     <nd ref='2454095466' />
     <tag k='building' v='yes' />
+    <tag k='kll:oid' v='null' />
   </way>
-  <way id='237520018' timestamp='2013-09-11T13:04:05Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17782732'>
+  <way id='237520018' action='modify' timestamp='2013-09-11T13:04:05Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17782732'>
     <nd ref='2454095485' />
     <nd ref='2454095480' />
     <nd ref='2454095473' />
     <nd ref='2454095478' />
     <nd ref='2454095485' />
     <tag k='building' v='yes' />
+    <tag k='kll:oid' v='null' />
   </way>
-  <way id='237520020' timestamp='2013-09-11T13:04:05Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17782732'>
+  <way id='237520020' action='modify' timestamp='2013-09-11T13:04:05Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17782732'>
     <nd ref='2454095507' />
     <nd ref='2454095501' />
     <nd ref='2454095493' />
     <nd ref='2454095497' />
     <nd ref='2454095507' />
     <tag k='building' v='yes' />
+    <tag k='kll:oid' v='null' />
   </way>
-  <way id='237520022' timestamp='2013-09-11T13:04:05Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17782732'>
+  <way id='237520022' action='modify' timestamp='2013-09-11T13:04:05Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17782732'>
     <nd ref='2454095484' />
     <nd ref='2454095481' />
     <nd ref='2454095488' />
@@ -940,8 +979,9 @@
     <nd ref='2454095491' />
     <nd ref='2454095484' />
     <tag k='building' v='yes' />
+    <tag k='kll:oid' v='null' />
   </way>
-  <way id='237520026' timestamp='2013-09-11T13:04:05Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17782732'>
+  <way id='237520026' action='modify' timestamp='2013-09-11T13:04:05Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17782732'>
     <nd ref='2454095514' />
     <nd ref='2454095511' />
     <nd ref='2454095506' />
@@ -950,168 +990,189 @@
     <nd ref='2454095503' />
     <nd ref='2454095514' />
     <tag k='building' v='yes' />
+    <tag k='kll:oid' v='null' />
   </way>
-  <way id='237520312' timestamp='2013-09-11T13:06:32Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17782776'>
+  <way id='237520312' action='modify' timestamp='2013-09-11T13:06:32Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17782776'>
     <nd ref='2454097981' />
     <nd ref='2454097978' />
     <nd ref='2454097973' />
     <nd ref='2454097975' />
     <nd ref='2454097981' />
     <tag k='building' v='yes' />
+    <tag k='kll:oid' v='null' />
   </way>
-  <way id='237520313' timestamp='2013-09-11T13:06:32Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17782776'>
+  <way id='237520313' action='modify' timestamp='2013-09-11T13:06:32Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17782776'>
     <nd ref='2454097978' />
     <nd ref='2454097976' />
     <nd ref='2454097970' />
     <nd ref='2454097972' />
     <nd ref='2454097978' />
     <tag k='building' v='yes' />
+    <tag k='kll:oid' v='null' />
   </way>
-  <way id='237520315' timestamp='2013-09-11T13:06:32Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17782776'>
+  <way id='237520315' action='modify' timestamp='2013-09-11T13:06:32Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17782776'>
     <nd ref='2454097976' />
     <nd ref='2454097974' />
     <nd ref='2454097967' />
     <nd ref='2454097969' />
     <nd ref='2454097976' />
     <tag k='building' v='yes' />
+    <tag k='kll:oid' v='null' />
   </way>
-  <way id='237520316' timestamp='2013-09-11T13:06:32Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17782776'>
+  <way id='237520316' action='modify' timestamp='2013-09-11T13:06:32Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17782776'>
     <nd ref='2454097974' />
     <nd ref='2454097971' />
     <nd ref='2454097965' />
     <nd ref='2454097966' />
     <nd ref='2454097974' />
     <tag k='building' v='yes' />
+    <tag k='kll:oid' v='null' />
   </way>
-  <way id='237520317' timestamp='2013-09-11T13:06:32Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17782776'>
+  <way id='237520317' action='modify' timestamp='2013-09-11T13:06:32Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17782776'>
     <nd ref='2454097971' />
     <nd ref='2454097968' />
     <nd ref='2454097963' />
     <nd ref='2454097964' />
     <nd ref='2454097971' />
     <tag k='building' v='yes' />
+    <tag k='kll:oid' v='null' />
   </way>
-  <way id='237520566' timestamp='2013-09-11T13:11:42Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17782851'>
+  <way id='237520566' action='modify' timestamp='2013-09-11T13:11:42Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17782851'>
     <nd ref='2454100167' />
     <nd ref='2454100166' />
     <nd ref='2454100156' />
     <nd ref='2454100159' />
     <nd ref='2454100167' />
     <tag k='building' v='yes' />
+    <tag k='kll:oid' v='null' />
   </way>
-  <way id='237520568' timestamp='2013-09-11T13:11:42Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17782851'>
+  <way id='237520568' action='modify' timestamp='2013-09-11T13:11:42Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17782851'>
     <nd ref='2454100165' />
     <nd ref='2454100164' />
     <nd ref='2454100162' />
     <nd ref='2454100163' />
     <nd ref='2454100165' />
     <tag k='building' v='yes' />
+    <tag k='kll:oid' v='null' />
   </way>
-  <way id='237520571' timestamp='2013-09-11T13:11:42Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17782851'>
+  <way id='237520571' action='modify' timestamp='2013-09-11T13:11:42Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17782851'>
     <nd ref='2454100161' />
     <nd ref='2454100160' />
     <nd ref='2454100157' />
     <nd ref='2454100158' />
     <nd ref='2454100161' />
     <tag k='building' v='yes' />
+    <tag k='kll:oid' v='null' />
   </way>
-  <way id='237520572' timestamp='2013-09-11T13:11:42Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17782851'>
+  <way id='237520572' action='modify' timestamp='2013-09-11T13:11:42Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17782851'>
     <nd ref='2454100155' />
     <nd ref='2454100154' />
     <nd ref='2454100152' />
     <nd ref='2454100153' />
     <nd ref='2454100155' />
     <tag k='building' v='yes' />
+    <tag k='kll:oid' v='null' />
   </way>
-  <way id='237616850' timestamp='2013-09-12T04:39:28Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17793320'>
+  <way id='237616850' action='modify' timestamp='2013-09-12T04:39:28Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17793320'>
     <nd ref='2454987543' />
     <nd ref='2454987541' />
     <nd ref='2454987534' />
     <nd ref='2454987537' />
     <nd ref='2454987543' />
     <tag k='building' v='yes' />
+    <tag k='kll:oid' v='null' />
   </way>
-  <way id='237616852' timestamp='2013-09-12T04:39:28Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17793320'>
+  <way id='237616852' action='modify' timestamp='2013-09-12T04:39:28Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17793320'>
     <nd ref='2454987529' />
     <nd ref='2454987522' />
     <nd ref='2454987509' />
     <nd ref='2454987515' />
     <nd ref='2454987529' />
     <tag k='building' v='yes' />
+    <tag k='kll:oid' v='null' />
   </way>
-  <way id='237616853' timestamp='2013-09-12T04:39:28Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17793320'>
+  <way id='237616853' action='modify' timestamp='2013-09-12T04:39:28Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17793320'>
     <nd ref='2454987520' />
     <nd ref='2454987514' />
     <nd ref='2454987502' />
     <nd ref='2454987508' />
     <nd ref='2454987520' />
     <tag k='building' v='yes' />
+    <tag k='kll:oid' v='null' />
   </way>
-  <way id='237616854' timestamp='2013-09-12T04:39:28Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17793320'>
+  <way id='237616854' action='modify' timestamp='2013-09-12T04:39:28Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17793320'>
     <nd ref='2454987505' />
     <nd ref='2454987498' />
     <nd ref='2454987491' />
     <nd ref='2454987494' />
     <nd ref='2454987505' />
     <tag k='building' v='yes' />
+    <tag k='kll:oid' v='null' />
   </way>
-  <way id='237616856' timestamp='2013-09-12T04:39:28Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17793320'>
+  <way id='237616856' action='modify' timestamp='2013-09-12T04:39:28Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17793320'>
     <nd ref='2454987526' />
     <nd ref='2454987524' />
     <nd ref='2454987513' />
     <nd ref='2454987519' />
     <nd ref='2454987526' />
     <tag k='building' v='yes' />
+    <tag k='kll:oid' v='null' />
   </way>
-  <way id='237616857' timestamp='2013-09-12T04:39:28Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17793320'>
+  <way id='237616857' action='modify' timestamp='2013-09-12T04:39:28Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17793320'>
     <nd ref='2454987521' />
     <nd ref='2454987517' />
     <nd ref='2454987497' />
     <nd ref='2454987504' />
     <nd ref='2454987521' />
     <tag k='building' v='yes' />
+    <tag k='kll:oid' v='null' />
   </way>
-  <way id='237616858' timestamp='2013-09-12T04:39:28Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17793320'>
+  <way id='237616858' action='modify' timestamp='2013-09-12T04:39:28Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17793320'>
     <nd ref='2454987507' />
     <nd ref='2454987501' />
     <nd ref='2454987493' />
     <nd ref='2454987495' />
     <nd ref='2454987507' />
     <tag k='building' v='yes' />
+    <tag k='kll:oid' v='null' />
   </way>
-  <way id='237616859' timestamp='2013-09-12T04:39:28Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17793320'>
+  <way id='237616859' action='modify' timestamp='2013-09-12T04:39:28Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17793320'>
     <nd ref='2454987510' />
     <nd ref='2454987503' />
     <nd ref='2454987490' />
     <nd ref='2454987492' />
     <nd ref='2454987510' />
     <tag k='building' v='yes' />
+    <tag k='kll:oid' v='null' />
   </way>
-  <way id='237616860' timestamp='2013-09-12T04:39:28Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17793320'>
+  <way id='237616860' action='modify' timestamp='2013-09-12T04:39:28Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17793320'>
     <nd ref='2454987518' />
     <nd ref='2454987511' />
     <nd ref='2454987496' />
     <nd ref='2454987499' />
     <nd ref='2454987518' />
     <tag k='building' v='yes' />
+    <tag k='kll:oid' v='null' />
   </way>
-  <way id='237616861' timestamp='2013-09-12T04:39:28Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17793320'>
+  <way id='237616861' action='modify' timestamp='2013-09-12T04:39:28Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17793320'>
     <nd ref='2454987539' />
     <nd ref='2454987533' />
     <nd ref='2454987523' />
     <nd ref='2454987530' />
     <nd ref='2454987539' />
     <tag k='building' v='yes' />
+    <tag k='kll:oid' v='null' />
   </way>
-  <way id='237616862' timestamp='2013-09-12T04:39:28Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17793320'>
+  <way id='237616862' action='modify' timestamp='2013-09-12T04:39:28Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17793320'>
     <nd ref='2454987516' />
     <nd ref='2454987512' />
     <nd ref='2454987500' />
     <nd ref='2454987506' />
     <nd ref='2454987516' />
     <tag k='building' v='yes' />
+    <tag k='kll:oid' v='null' />
   </way>
-  <way id='237616863' timestamp='2013-09-12T04:39:28Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17793320'>
+  <way id='237616863' action='modify' timestamp='2013-09-12T04:39:28Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17793320'>
     <nd ref='2454987544' />
     <nd ref='2454987542' />
     <nd ref='2454987532' />
@@ -1119,8 +1180,9 @@
     <nd ref='2454987540' />
     <nd ref='2454987544' />
     <tag k='building' v='yes' />
+    <tag k='kll:oid' v='null' />
   </way>
-  <way id='237616864' timestamp='2013-09-12T04:39:28Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17793320'>
+  <way id='237616864' action='modify' timestamp='2013-09-12T04:39:28Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17793320'>
     <nd ref='2454987527' />
     <nd ref='2454987538' />
     <nd ref='2454987535' />
@@ -1129,96 +1191,108 @@
     <nd ref='2454987525' />
     <nd ref='2454987527' />
     <tag k='building' v='yes' />
+    <tag k='kll:oid' v='null' />
   </way>
-  <way id='237617065' timestamp='2013-09-12T04:50:44Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17793356'>
+  <way id='237617065' action='modify' timestamp='2013-09-12T04:50:44Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17793356'>
     <nd ref='2454989109' />
     <nd ref='2454989107' />
     <nd ref='2454989104' />
     <nd ref='2454989106' />
     <nd ref='2454989109' />
     <tag k='building' v='yes' />
+    <tag k='kll:oid' v='null' />
   </way>
-  <way id='237617066' timestamp='2013-09-12T04:50:44Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17793356'>
+  <way id='237617066' action='modify' timestamp='2013-09-12T04:50:44Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17793356'>
     <nd ref='2454989149' />
     <nd ref='2454989148' />
     <nd ref='2454989133' />
     <nd ref='2454989134' />
     <nd ref='2454989149' />
     <tag k='building' v='yes' />
+    <tag k='kll:oid' v='null' />
   </way>
-  <way id='237617067' timestamp='2013-09-12T04:50:44Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17793356'>
+  <way id='237617067' action='modify' timestamp='2013-09-12T04:50:44Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17793356'>
     <nd ref='2454989096' />
     <nd ref='2454989095' />
     <nd ref='2454989089' />
     <nd ref='2454989090' />
     <nd ref='2454989096' />
     <tag k='building' v='yes' />
+    <tag k='kll:oid' v='null' />
   </way>
-  <way id='237617068' timestamp='2013-09-12T04:50:44Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17793356'>
+  <way id='237617068' action='modify' timestamp='2013-09-12T04:50:44Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17793356'>
     <nd ref='2454989140' />
     <nd ref='2454989136' />
     <nd ref='2454989122' />
     <nd ref='2454989125' />
     <nd ref='2454989140' />
     <tag k='building' v='yes' />
+    <tag k='kll:oid' v='null' />
   </way>
-  <way id='237617069' timestamp='2013-09-12T04:50:44Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17793356'>
+  <way id='237617069' action='modify' timestamp='2013-09-12T04:50:44Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17793356'>
     <nd ref='2454989152' />
     <nd ref='2454989151' />
     <nd ref='2454989138' />
     <nd ref='2454989142' />
     <nd ref='2454989152' />
     <tag k='building' v='yes' />
+    <tag k='kll:oid' v='null' />
   </way>
-  <way id='237617070' timestamp='2013-09-12T04:50:44Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17793356'>
+  <way id='237617070' action='modify' timestamp='2013-09-12T04:50:44Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17793356'>
     <nd ref='2454989123' />
     <nd ref='2454989119' />
     <nd ref='2454989115' />
     <nd ref='2454989117' />
     <nd ref='2454989123' />
     <tag k='building' v='yes' />
+    <tag k='kll:oid' v='null' />
   </way>
-  <way id='237617073' timestamp='2013-09-12T04:50:44Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17793356'>
+  <way id='237617073' action='modify' timestamp='2013-09-12T04:50:44Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17793356'>
     <nd ref='2454989135' />
     <nd ref='2454989131' />
     <nd ref='2454989120' />
     <nd ref='2454989121' />
     <nd ref='2454989135' />
     <tag k='building' v='yes' />
+    <tag k='kll:oid' v='null' />
   </way>
-  <way id='237617074' timestamp='2013-09-12T04:50:44Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17793356'>
+  <way id='237617074' action='modify' timestamp='2013-09-12T04:50:44Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17793356'>
     <nd ref='2454989147' />
     <nd ref='2454989144' />
     <nd ref='2454989132' />
     <nd ref='2454989141' />
     <nd ref='2454989147' />
     <tag k='building' v='yes' />
+    <tag k='kll:oid' v='null' />
   </way>
-  <way id='237617077' timestamp='2013-09-12T04:50:44Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17793356'>
+  <way id='237617077' action='modify' timestamp='2013-09-12T04:50:44Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17793356'>
     <nd ref='2454989145' />
     <nd ref='2454989139' />
     <nd ref='2454989127' />
     <nd ref='2454989129' />
     <nd ref='2454989145' />
     <tag k='building' v='yes' />
+    <tag k='kll:oid' v='null' />
   </way>
-  <way id='237617078' timestamp='2013-09-12T04:50:45Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17793356'>
+  <way id='237617078' action='modify' timestamp='2013-09-12T04:50:45Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17793356'>
     <nd ref='2454989143' />
     <nd ref='2454989137' />
     <nd ref='2454989128' />
     <nd ref='2454989130' />
     <nd ref='2454989143' />
     <tag k='building' v='yes' />
+    <tag k='kll:oid' v='null' />
   </way>
-  <way id='237617080' timestamp='2013-09-12T04:50:45Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17793356'>
+  <way id='237617080' action='modify' timestamp='2013-09-12T04:50:45Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17793356'>
     <nd ref='2454989105' />
     <nd ref='2454989103' />
     <nd ref='2454989100' />
     <nd ref='2454989102' />
     <nd ref='2454989105' />
     <tag k='building' v='yes' />
+    <tag k='kll:oid' v='null' />
   </way>
-  <way id='237617082' timestamp='2013-09-12T04:50:45Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17793356'>
+  <way id='237617082' action='modify' timestamp='2013-09-12T04:50:45Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17793356'>
     <nd ref='2454989113' />
     <nd ref='2454989111' />
     <nd ref='2454989114' />
@@ -1227,8 +1301,9 @@
     <nd ref='2454989110' />
     <nd ref='2454989113' />
     <tag k='building' v='yes' />
+    <tag k='kll:oid' v='null' />
   </way>
-  <way id='237617083' timestamp='2013-09-12T04:50:45Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17793356'>
+  <way id='237617083' action='modify' timestamp='2013-09-12T04:50:45Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17793356'>
     <nd ref='2454989093' />
     <nd ref='2454989091' />
     <nd ref='2454989094' />
@@ -1239,16 +1314,18 @@
     <nd ref='2454989092' />
     <nd ref='2454989093' />
     <tag k='building' v='yes' />
+    <tag k='kll:oid' v='null' />
   </way>
-  <way id='237617331' timestamp='2013-09-12T05:04:27Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17793422'>
+  <way id='237617331' action='modify' timestamp='2013-09-12T05:04:27Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17793422'>
     <nd ref='2454991137' />
     <nd ref='2454991136' />
     <nd ref='2454991132' />
     <nd ref='2454991134' />
     <nd ref='2454991137' />
     <tag k='building' v='yes' />
+    <tag k='kll:oid' v='null' />
   </way>
-  <way id='237656158' timestamp='2013-09-12T10:23:16Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17796825'>
+  <way id='237656158' action='modify' timestamp='2013-09-12T10:23:16Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17796825'>
     <nd ref='2455280600' />
     <nd ref='2455280601' />
     <nd ref='2455280603' />
@@ -1261,22 +1338,25 @@
     <nd ref='2455280602' />
     <nd ref='2455280600' />
     <tag k='building' v='yes' />
+    <tag k='kll:oid' v='null' />
   </way>
-  <way id='237656177' timestamp='2013-09-12T10:23:17Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17796825'>
+  <way id='237656177' action='modify' timestamp='2013-09-12T10:23:17Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17796825'>
     <nd ref='2455280597' />
     <nd ref='2455280594' />
     <nd ref='2455280592' />
     <nd ref='2455280593' />
     <nd ref='2455280597' />
     <tag k='building' v='yes' />
+    <tag k='kll:oid' v='null' />
   </way>
-  <way id='237656179' timestamp='2013-09-12T10:23:17Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17796825'>
+  <way id='237656179' action='modify' timestamp='2013-09-12T10:23:17Z' uid='1700096' user='GautamPratik' visible='true' version='1' changeset='17796825'>
     <nd ref='2455280591' />
     <nd ref='2455280590' />
     <nd ref='2455280588' />
     <nd ref='2455280589' />
     <nd ref='2455280591' />
     <tag k='building' v='yes' />
+    <tag k='kll:oid' v='null' />
   </way>
   <relation id='3169466' timestamp='2013-08-28T09:14:55Z' uid='826065' user='Nirab Pudasaini' visible='true' version='1' changeset='17550970'>
     <member type='node' ref='1887593406' role='start' />
