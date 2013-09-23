@@ -66,7 +66,8 @@ public class building_dom{
 				NodeList childs = eElement1.getChildNodes(); //list of nd and tags
 				for (int k =0 ; k < childs.getLength(); k++){
 					Node childs_individual = childs.item(k); //either nd or tag node
-					System.out.println((String)(childs_individual.getNodeValue()));
+					System.out.println((String)(childs_individual.getNodeName()));
+					System.out.println((String)(childs_individual.getLocalName()));
 					// Element eElement1 = (Element) childs_individual;
 					
 
