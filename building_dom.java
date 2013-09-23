@@ -66,51 +66,54 @@ public class building_dom{
 				NodeList childs = eElement1.getChildNodes(); //list of nd and tags
 				for (int k =0 ; k < childs.getLength(); k++){
 					Node childs_individual = childs.item(k); //either nd or tag node
-					System.out.println((String)(childs_individual.getNodeName()));
-					System.out.println((String)(childs_individual.getLocalName()));
-					// Element eElement1 = (Element) childs_individual;
+					Element e1=(Element) childs_individual;
+					if (e1.getAttribute("k")=="building"){
+						System.out.println("I love you");
+					// System.out.println((childs_individual.getNodeName()));
+					// System.out.println((String)(childs_individual.getLocalName()));
+					// // Element eElement1 = (Element) childs_individual;
 					
 
 
-					// Element eElement_test = (Element) childs_individual;
-					// Node tag_test = eElement_test.getAttribute("tag");
-					// Element tag_test_element = (Element)tag_test;
-					// tag_test_element.getAttributes("")
+					// // Element eElement_test = (Element) childs_individual;
+					// // Node tag_test = eElement_test.getAttribute("tag");
+					// // Element tag_test_element = (Element)tag_test;
+					// // tag_test_element.getAttributes("")
 					
 
 
-					// java.lang.String nodeName = childs_individual.getNodeName();
-					// System.out.println(nodeName);
-					
-
-					if ((("#text").equals((String)(childs_individual.getNodeName()))))										
-					// // NodeList tag = doc.getElementsByTagName("tag");//instead try getting child nodeList
-				
-					// // System.out.println (tag.getLength());
-					
-					// // for (int j= 0; j<tag.getLength(); j++){
-					// // 	Node tNode = tag.item(j);
-					// // 	if (wNode.getNodeType() == Node.ELEMENT_NODE) 
-					{
-							
-							Element eElement = (Element) childs_individual;
-							// Node childs_individual1 = childs_individual.getElementsByTagName("tag");
-							// Element eElement = (Element) childs_individual1;
-							
-							String key = eElement.getAttribute("k");
-							
-							String value = eElement.getAttribute("v");
-
-
-							if (key=="building"){
-
-
-								System.out.println("gota building");
-
-							}
-							
-							
+					// // java.lang.String nodeName = childs_individual.getNodeName();
+					// // System.out.println(nodeName);
 					}
+
+					// if ((("#text").equals((String)(childs_individual.getNodeName()))))										
+					// // // NodeList tag = doc.getElementsByTagName("tag");//instead try getting child nodeList
+				
+					// // // System.out.println (tag.getLength());
+					
+					// // // for (int j= 0; j<tag.getLength(); j++){
+					// // // 	Node tNode = tag.item(j);
+					// // // 	if (wNode.getNodeType() == Node.ELEMENT_NODE) 
+					// {
+							
+					// 		Element eElement = (Element) childs_individual;
+					// 		// Node childs_individual1 = childs_individual.getElementsByTagName("tag");
+					// 		// Element eElement = (Element) childs_individual1;
+							
+					// 		String key = eElement.getAttribute("k");
+							
+					// 		String value = eElement.getAttribute("v");
+
+
+					// 		if (key=="building"){
+
+
+					// 			System.out.println("got a building");
+
+					// 		}
+							
+							
+					// }
 				}
 				// System.out.println(osm_id+"\n");
 				// System.out.println(key+"\t");
