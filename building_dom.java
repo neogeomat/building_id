@@ -1,5 +1,20 @@
 
-import java.io.BufferedReader;
+import java.io.File;
+import java.io.IOException;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerException;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.NamedNodeMap;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+import org.xml.sax.SAXException;import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.util.ArrayList;
@@ -23,166 +38,87 @@ import java.sql.*;
 //      osmPolygons = new ArrayList<osmLine>();
 
 public class building_dom{
-	static int i=0;
+	
 	public static void main(String args[]){ 
 		try{
+			String filepath="C:\\Users\\Poshan\\Desktop\\building_id\\before_change.osm";
+			DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
+			DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
+			Document doc = docBuilder.parse(filepath);
 			
-			ArrayList <String> buildingidsss =new ArrayList<String>();
-			String osmfile="C:\\Users\\Poshan\\Desktop\\building_id\\before_change.osm";
-	       //Create a "parser factory" for creating SAX parsers
-	    	SAXParserFactory spfac = SAXParserFactory.newInstance();
 
-	       //Now use the parser factory to create a SAXParser object
-	    	
-	    	SAXParser sp = spfac.newSAXParser();
-	       //counting lines
-	    	BufferedReader reader = new BufferedReader(new FileReader(osmfile));
-			int lines = 0;
-			while (reader.readLine()!= null){ 
-				lines++;
-			}
-			reader.close();
+			// Node way = doc.getElementsByTagName("way").item(0);
+			// NamedNodeMap attributes = way.getAttributes();
+			// Node nodeAtrr = attributes.getNamedItem("");
 
-			System.out.println(lines);
-	       //Finally, tell the parser to parse the input and notify the handler
-	       	// sp.parse(osmfile, this);
-	       	// cleanNodes(); //removes nodes that exist in ways
-    	
+			// Element rootNode = doc.getRootElement();
+
+			// Element way = rootNode.getElementsByTagName("way");
 			
-			DefaultHandler handler1 = new DefaultHandler() {
-				
-				// public ArrayList<osmbuilding> buildings = new ArrayList<osmbuilding>();
-				
-				
-
-				// public ArrayList <Double> buildingidsss =new ArrayList<Double>();
-
-				boolean withinWay = false;
-			    boolean withinBuilding = false;
-			    boolean withinTag = false;
-			    // boolean foundFirst = false;
-			    // boolean samePoint = false;
-			    // double firstId;
-			    // boolean deletedData = false;
-			    // int totalLines;
-			    // int linecount;
-				public void startElement(String uri, String localName,
-			            String qName, Attributes attributes) throws SAXException {
-					
-						String buildingid="";
-						// System.out.println("Start Element :" + qName);
-					
-						if (qName.equalsIgnoreCase("way")){
-							withinWay = true;
-							buildingid=attributes.getValue("id");
-							System.out.println("within building ");
-							// buildingidsss.add(buildingid);
+			NodeList wayList = doc.getElementsByTagName("way");
+			
+			for (int i=0 ; i<wayList.getLength(); i++){
+				Node wNode = wayList.item(i);
+				Element eElement1 = (Element) wNode;
+				NodeList tag = doc.getElementsByTagName("tag");
+				System.out.println (tag.getLength());
+				for (int j= 0; j<tag.getLength(); j++){
+						Node tNode = tag.item(j);
+						if (wNode.getNodeType() == Node.ELEMENT_NODE) {
+							Element eElement = (Element) tNode;
+							String key =eElement.getAttribute("k");
+							System.out.println(key+"\t");
+							String value =eElement.getAttribute("v");
+							System.out.println(value+"\t");
+							String osm_id = eElement1.getAttribute("id");
+							System.out.println(osm_id+"\n");
 						}
-						
-
-						else if(qName.equalsIgnoreCase("tag")){
-							withinTag = true;
-							String Key = attributes.getValue("k");
-						n	String Value = attributes.getValue("v");
-							if (Key == "building"){
-									withinBuilding = true;
-									System.out.println("within building "+i);
-									data(buildingid);
-									i=i+1;
-							}
-						}
-
-						// if (withinBuilding){
-	
-						// 	// String buildingid = attributes.getValue("id");
-						// 	// buildingidsss.add(buildingid);
-						// 	System.out.println("building found");
-						// 	data(attributes.getValue("id"));
-							
-						// }
 				}
-				public void endElement(String uri, String localName, String qName)
-            			throws SAXException {
-     
-					if(qName.equalsIgnoreCase("way")){
-
-						withinWay = false;
-					}
-
-					// if(qName.equalsIgnoreCase("tag")){
-
-					// 	withinTag = false;
-					// }
-
-
-     			}
-    
-					
-					
-
+			}
+			System.out.println("Done");
 			
-
-
-
-				
-				// public void endElement(String uri, String localName,
-				// String qName) throws SAXException {
-		 
-				// 	System.out.println("End Element :" + qName);
-				
-				// }
-			
-			};
-			
-
-			sp.parse("C:\\Users\\Poshan\\Desktop\\building_id\\before_change.osm", handler1);
-			
-
-			// for (int i = 0; i < buildingidss.size(); i++){
-			//    String item = buildingidss.get(i);
-			//    System.out.println("Building_id :" + item);
-			// }
 		}
-	catch (Exception e){
-			e.printStackTrace();
-	}
-	}
 		
-	
-	public static void data(String s){
-		
-		try {
-			Class.forName("com.mysql.jdbc.Driver");
-			System.out.println("MySQL JDBC Driver Registered!");
-			Connection connection = null;			
-			connection = DriverManager
-			.getConnection("jdbc:mysql://localhost:3306/table1/table1","root", "");//my table name username and password
-
-			try{
-				if (connection != null) {
-					System.out.println("You made it, take control your database now!");
-					Statement st = connection.createStatement();
-					int val = st.executeUpdate("INSERT table1 VALUES("+i+","+"s"+")");
-						// int val = st.executeUpdate("INSERT employee VALUES("+i+","+"'Aman'"+")");
-						System.out.println("1 row affected");
-
-				} 
-				else {
-					System.out.println("Failed to make connection!");
-				}
-				i=i+1;
-			}
-			catch (SQLException e) {
-				System.out.println("Connection Failed! Check output console");
+		catch (Exception e){
 				e.printStackTrace();
-				return;
-			}
-		}
-		catch (Exception e) {
-			System.out.println("Connection Failed! Check output console");
-			e.printStackTrace();
-			return;
 		}
 	}
+		
+	
+	// public static void data(String s){
+		
+	// 	try {
+	// 		Class.forName("com.mysql.jdbc.Driver");
+	// 		System.out.println("MySQL JDBC Driver Registered!");
+	// 		Connection connection = null;			
+	// 		connection = DriverManager
+	// 		.getConnection("jdbc:mysql://localhost:3306/table1/table1","root", "");//my table name username and password
+
+	// 		try{
+	// 			if (connection != null) {
+	// 				System.out.println("You made it, take control your database now!");
+	// 				Statement st = connection.createStatement();
+	// 				int val = st.executeUpdate("INSERT table1 VALUES("+i+","+"s"+")");
+	// 					// int val = st.executeUpdate("INSERT employee VALUES("+i+","+"'Aman'"+")");
+	// 					System.out.println("1 row affected");
+
+	// 			} 
+	// 			else {
+	// 				System.out.println("Failed to make connection!");
+	// 			}
+	// 			i=i+1;
+	// 		}
+	// 		catch (SQLException e) {
+	// 			System.out.println("Connection Failed! Check output console");
+	// 			e.printStackTrace();
+	// 			return;
+	// 		}
+	// 	}
+	// 	catch (Exception e) {
+	// 		System.out.println("Connection Failed! Check output console");
+	// 		e.printStackTrace();
+	// 		return;
+	// 	}
+	// }
 		
 }
