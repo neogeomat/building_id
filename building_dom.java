@@ -63,28 +63,33 @@ public class building_dom{
 				Node wNode = wayList.item(i);
 				Element eElement1 = (Element) wNode;   //inside a way tree
 				String osm_id = eElement1.getAttribute("id");
-				NodeList childs = eElement1.getChildNodes(); //list of nd and tags
+				NodeList childs = eElement1.getElementsByTagName("tag"); //list of nd and tags
 				for (int k =0 ; k < childs.getLength(); k++){
 					Node childs_individual = childs.item(k); //either nd or tag node
 					Element e1=(Element) childs_individual;
-					if (e1.getAttribute("k")=="building"){
-						System.out.println("I love you");
-					// System.out.println((childs_individual.getNodeName()));
-					// System.out.println((String)(childs_individual.getLocalName()));
-					// // Element eElement1 = (Element) childs_individual;
+					System.out.println(e1.getAttribute("k"));
+
+
+
+					// Element e1=(Element) childs_individual;
+					// if (e1.getAttribute("k")=="building"){
+					// 	System.out.println("I love you");
+					// // System.out.println((childs_individual.getNodeName()));
+					// // System.out.println((String)(childs_individual.getLocalName()));
+					// // // Element eElement1 = (Element) childs_individual;
 					
 
 
-					// // Element eElement_test = (Element) childs_individual;
-					// // Node tag_test = eElement_test.getAttribute("tag");
-					// // Element tag_test_element = (Element)tag_test;
-					// // tag_test_element.getAttributes("")
+					// // // Element eElement_test = (Element) childs_individual;
+					// // // Node tag_test = eElement_test.getAttribute("tag");
+					// // // Element tag_test_element = (Element)tag_test;
+					// // // tag_test_element.getAttributes("")
 					
 
 
-					// // java.lang.String nodeName = childs_individual.getNodeName();
-					// // System.out.println(nodeName);
-					}
+					// // // java.lang.String nodeName = childs_individual.getNodeName();
+					// // // System.out.println(nodeName);
+					// }
 
 					// if ((("#text").equals((String)(childs_individual.getNodeName()))))										
 					// // // NodeList tag = doc.getElementsByTagName("tag");//instead try getting child nodeList
