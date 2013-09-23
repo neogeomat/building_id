@@ -14,10 +14,12 @@ import org.w3c.dom.Element;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
-import org.xml.sax.SAXException;import java.io.BufferedReader;
+import org.xml.sax.SAXException;
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.util.ArrayList;
+import java.lang.String;
 
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
@@ -59,22 +61,62 @@ public class building_dom{
 			
 			for (int i=0 ; i<wayList.getLength(); i++){
 				Node wNode = wayList.item(i);
-				Element eElement1 = (Element) wNode;
-				NodeList tag = doc.getElementsByTagName("tag");
-				System.out.println (tag.getLength());
-				for (int j= 0; j<tag.getLength(); j++){
-						Node tNode = tag.item(j);
-						if (wNode.getNodeType() == Node.ELEMENT_NODE) {
-							Element eElement = (Element) tNode;
-							String key =eElement.getAttribute("k");
-							System.out.println(key+"\t");
-							String value =eElement.getAttribute("v");
-							System.out.println(value+"\t");
-							String osm_id = eElement1.getAttribute("id");
-							System.out.println(osm_id+"\n");
-						}
+				Element eElement1 = (Element) wNode;   //inside a way tree
+				String osm_id = eElement1.getAttribute("id");
+				NodeList childs = eElement1.getChildNodes(); //list of nd and tags
+				for (int k =0 ; k < childs.getLength(); k++){
+					Node childs_individual = childs.item(k); //either nd or tag node
+					System.out.println((String)(childs_individual.getNodeValue()));
+					// Element eElement1 = (Element) childs_individual;
+					
+
+
+					// Element eElement_test = (Element) childs_individual;
+					// Node tag_test = eElement_test.getAttribute("tag");
+					// Element tag_test_element = (Element)tag_test;
+					// tag_test_element.getAttributes("")
+					
+
+
+					// java.lang.String nodeName = childs_individual.getNodeName();
+					// System.out.println(nodeName);
+					
+
+					if ((("#text").equals((String)(childs_individual.getNodeName()))))										
+					// // NodeList tag = doc.getElementsByTagName("tag");//instead try getting child nodeList
+				
+					// // System.out.println (tag.getLength());
+					
+					// // for (int j= 0; j<tag.getLength(); j++){
+					// // 	Node tNode = tag.item(j);
+					// // 	if (wNode.getNodeType() == Node.ELEMENT_NODE) 
+					{
+							
+							Element eElement = (Element) childs_individual;
+							// Node childs_individual1 = childs_individual.getElementsByTagName("tag");
+							// Element eElement = (Element) childs_individual1;
+							
+							String key = eElement.getAttribute("k");
+							
+							String value = eElement.getAttribute("v");
+
+
+							if (key=="building"){
+
+
+								System.out.println("gota building");
+
+							}
+							
+							
+					}
 				}
+				// System.out.println(osm_id+"\n");
+				// System.out.println(key+"\t");
+				// System.out.println(value+"\t");
+
 			}
+			
 			System.out.println("Done");
 			
 		}
@@ -85,6 +127,18 @@ public class building_dom{
 	}
 		
 	
+// public static void removeWhitespaceNodes(Element e) {
+// 	NodeList children = e.getChildNodes();
+// 	for (int i = children.getLength() - 1; i >= 0; i--) {
+// 		Node child = children.item(i);
+// 		if (child instanceof Text && ((Text) child).getData().trim().length() == 0) {
+// 			e.removeChild(child);
+// 		}
+// 		else if (child instanceof Element) {
+// 			removeWhitespaceNodes((Element) child);
+// 		}
+// 	}
+// }
 	// public static void data(String s){
 		
 	// 	try {
