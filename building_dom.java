@@ -47,7 +47,7 @@ public class building_dom{
 			DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
 			DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
 			Document doc = docBuilder.parse(filepath);
-			
+			ArrayList<String> lista = new ArrayList<String>();
 
 			// Node way = doc.getElementsByTagName("way").item(0);
 			// NamedNodeMap attributes = way.getAttributes();
@@ -59,15 +59,32 @@ public class building_dom{
 			
 			NodeList wayList = doc.getElementsByTagName("way");
 			
+			HashSet collection = new HashSet ();
 			for (int i=0 ; i<wayList.getLength(); i++){
 				Node wNode = wayList.item(i);
 				Element eElement1 = (Element) wNode;   //inside a way tree
 				String osm_id = eElement1.getAttribute("id");
 				NodeList childs = eElement1.getElementsByTagName("tag"); //list of nd and tags
+				System.out.println("\n");
 				for (int k =0 ; k < childs.getLength(); k++){
+					
 					Node childs_individual = childs.item(k); //either nd or tag node
 					Element e1=(Element) childs_individual;
-					System.out.println(e1.getAttribute("k"));
+					// System.out.println(e1.getAttribute("k"));
+					
+					//yaha samma thikai6 yaha dekhi k garne
+					
+					lista.add(e1.getAttribute("k"));
+				}
+				
+				collection.sort(lista);	
+				
+				if (lista.contains("building")){
+					System.out.println("building gotta");
+				}
+
+
+
 
 
 
@@ -119,14 +136,14 @@ public class building_dom{
 							
 							
 					// }
-				}
+				
 				// System.out.println(osm_id+"\n");
 				// System.out.println(key+"\t");
 				// System.out.println(value+"\t");
 
 			}
 			
-			System.out.println("Done");
+			// System.out.println("Done");
 			
 		}
 		
