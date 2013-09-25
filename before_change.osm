@@ -9,7 +9,8 @@
     <nd ref='2105345005' />
     <nd ref='2105345017' />
     <tag k='building' v='yes' />
-    <tag k='kll:oid' v='null' />
+    <tag k='kll:oid' v='3651' />
+    <tag k='kll:district' v='Bhaktpaur'/>
   </way>
 
     <way id='200563461' action='modify' timestamp='2013-01-11T08:48:18Z' uid='1068220' user='Helina' visible='true' version='1' changeset='14607147'>
@@ -19,7 +20,7 @@
     <nd ref='2105345005' />
     <nd ref='2105345017' />
     <tag k='building' v='yes' />
-    <tag k='kll:oid' v='null' />
+    <tag k='kll:oid' v='1331' />
     <tag k='kll:district' v='kathmandu'/>
   </way>
 </osm>

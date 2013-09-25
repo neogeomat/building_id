@@ -28,7 +28,12 @@ import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.Statement;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
+import java.sql.DatabaseMetaData;
 
 // import java.sql.DriverManager;
 // import java.sql.Connection;
@@ -47,7 +52,8 @@ public class building_dom{
 			DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
 			DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
 			Document doc = docBuilder.parse(filepath);
-			ArrayList<String> lista = new ArrayList<String>();
+			ArrayList<String> listkey = new ArrayList<String>();//array list that contains the keys
+			ArrayList<String> listvalue = new ArrayList<String>();// array list that contains the values
 
 			// Node way = doc.getElementsByTagName("way").item(0);
 			// NamedNodeMap attributes = way.getAttributes();
@@ -59,89 +65,45 @@ public class building_dom{
 			
 			NodeList wayList = doc.getElementsByTagName("way");
 			
-			HashSet collection = new HashSet ();
+			// HashSet collection = new HashSet ();
+			// for (int p = 0; p<wayList.getLength(); p++){
+			// 	//yaha samma correct 6
+			// 	System.out.println("yaha aai pugyo");
+			// 	// Node wNode1 = wayList.item(p);
+			// 	// Element eElement2 = (Element) wNode1;
+			// 	Element node = doc.createElement("tagg");
+			// 	node.setAttribute("attrib", "attrib_value"); //add an attribute may be district or ward or 
+			// }
+			
+
+
 			for (int i=0 ; i<wayList.getLength(); i++){
 				Node wNode = wayList.item(i);
 				Element eElement1 = (Element) wNode;   //inside a way tree
 				String osm_id = eElement1.getAttribute("id");
 				NodeList childs = eElement1.getElementsByTagName("tag"); //list of nd and tags
-				System.out.println("\n");
-				for (int k =0 ; k < childs.getLength(); k++){
+				// System.out.println("\n");
+				
+			
+				
+
+				for (int k = 0 ; k < childs.getLength(); k++){
 					
 					Node childs_individual = childs.item(k); //either nd or tag node
 					Element e1=(Element) childs_individual;
-					// System.out.println(e1.getAttribute("k"));
+					// System.out.println((childs_individual.getNodeName()));
+					listkey.add(e1.getAttribute("k"));
+					listvalue.add(e1.getAttribute("v"));
 					
-					//yaha samma thikai6 yaha dekhi k garne
-					
-					lista.add(e1.getAttribute("k"));
-				}
-				
-				collection.sort(lista);	
-				
-				if (lista.contains("building")){
-					System.out.println("building gotta");
-				}
-
-
-
-
-
-
-					// Element e1=(Element) childs_individual;
-					// if (e1.getAttribute("k")=="building"){
-					// 	System.out.println("I love you");
-					// // System.out.println((childs_individual.getNodeName()));
-					// // System.out.println((String)(childs_individual.getLocalName()));
-					// // // Element eElement1 = (Element) childs_individual;
-					
-
-
-					// // // Element eElement_test = (Element) childs_individual;
-					// // // Node tag_test = eElement_test.getAttribute("tag");
-					// // // Element tag_test_element = (Element)tag_test;
-					// // // tag_test_element.getAttributes("")
-					
-
-
-					// // // java.lang.String nodeName = childs_individual.getNodeName();
-					// // // System.out.println(nodeName);
-					// }
-
-					// if ((("#text").equals((String)(childs_individual.getNodeName()))))										
-					// // // NodeList tag = doc.getElementsByTagName("tag");//instead try getting child nodeList
-				
-					// // // System.out.println (tag.getLength());
-					
-					// // // for (int j= 0; j<tag.getLength(); j++){
-					// // // 	Node tNode = tag.item(j);
-					// // // 	if (wNode.getNodeType() == Node.ELEMENT_NODE) 
-					// {
-							
-					// 		Element eElement = (Element) childs_individual;
-					// 		// Node childs_individual1 = childs_individual.getElementsByTagName("tag");
-					// 		// Element eElement = (Element) childs_individual1;
-							
-					// 		String key = eElement.getAttribute("k");
-							
-					// 		String value = eElement.getAttribute("v");
-
-
-					// 		if (key=="building"){
-
-
-					// 			System.out.println("got a building");
-
-					// 		}
-							
-							
-					// }
-				
-				// System.out.println(osm_id+"\n");
-				// System.out.println(key+"\t");
-				// System.out.println(value+"\t");
 
 			}
+			}
+			for (int l=0; l<listkey.size(); l++){
+				System.out.print(listkey.get(l)+"\t");
+				System.out.println(listvalue.get(l));
+
+			}
+			// data("poshan");
 			
 			// System.out.println("Done");
 			
@@ -150,55 +112,52 @@ public class building_dom{
 		catch (Exception e){
 				e.printStackTrace();
 		}
+		data ("poshan");
 	}
-		
 	
-// public static void removeWhitespaceNodes(Element e) {
-// 	NodeList children = e.getChildNodes();
-// 	for (int i = children.getLength() - 1; i >= 0; i--) {
-// 		Node child = children.item(i);
-// 		if (child instanceof Text && ((Text) child).getData().trim().length() == 0) {
-// 			e.removeChild(child);
-// 		}
-// 		else if (child instanceof Element) {
-// 			removeWhitespaceNodes((Element) child);
-// 		}
-// 	}
-// }
-	// public static void data(String s){
+	
+
+	public static void data(String s){
 		
-	// 	try {
-	// 		Class.forName("com.mysql.jdbc.Driver");
-	// 		System.out.println("MySQL JDBC Driver Registered!");
-	// 		Connection connection = null;			
-	// 		connection = DriverManager
-	// 		.getConnection("jdbc:mysql://localhost:3306/table1/table1","root", "");//my table name username and password
+		try {
+			System.out.println("yaha samma aayo hai");
+			Class.forName("org.sqlite.JDBC");  
+         	Connection connection = null;	
+         	connection = DriverManager.getConnection("jdbc:sqlite:C://Users/Poshan/Desktop/building_id/table_ko_name.db");
+			System.out.println("sqlite JDBC Driver Registered!");
+			
+			// connection = DriverManager.getConnection("jdbc:sqlite:test.db");
+			try{
+				if (connection != null){
+					System.out.println(s+"I love u");
+					
+				}
+			}
+		// 	try{
+		// 		if (connection != null) {
+		// 			System.out.println("You made it, take control your database now!");
+		// 			Statement st = connection.createStatement();
+		// 			int val = st.executeUpdate("INSERT table1 VALUES("+i+","+"s"+")");
+		// 				// int val = st.executeUpdate("INSERT employee VALUES("+i+","+"'Aman'"+")");
+		// 				System.out.println("1 row affected");
 
-	// 		try{
-	// 			if (connection != null) {
-	// 				System.out.println("You made it, take control your database now!");
-	// 				Statement st = connection.createStatement();
-	// 				int val = st.executeUpdate("INSERT table1 VALUES("+i+","+"s"+")");
-	// 					// int val = st.executeUpdate("INSERT employee VALUES("+i+","+"'Aman'"+")");
-	// 					System.out.println("1 row affected");
+		// 		} 
+		// 		else {
+		// 			System.out.println("Failed to make connection!");
+		// 		}
+		// 		i=i+1;
+				catch (Exception e) {
+					System.out.println("Connection Failed! Check output console");
+					e.printStackTrace();
+					return;
+				}
+			}
+			catch (Exception e) {
+				System.out.println("Connection Failed! Check output console");
+				e.printStackTrace();
+				return;
+			}
 
-	// 			} 
-	// 			else {
-	// 				System.out.println("Failed to make connection!");
-	// 			}
-	// 			i=i+1;
-	// 		}
-	// 		catch (SQLException e) {
-	// 			System.out.println("Connection Failed! Check output console");
-	// 			e.printStackTrace();
-	// 			return;
-	// 		}
-	// 	}
-	// 	catch (Exception e) {
-	// 		System.out.println("Connection Failed! Check output console");
-	// 		e.printStackTrace();
-	// 		return;
-	// 	}
-	// }
+	}
 		
 }
