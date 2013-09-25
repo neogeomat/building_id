@@ -28,12 +28,13 @@ import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
 
-import java.sql.Connection;
-import java.sql.Statement;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.ResultSetMetaData;
-import java.sql.DatabaseMetaData;
+import java.sql.*;
+// import java.sql.Connection;
+// import java.sql.Statement;
+// import java.sql.DriverManager;
+// import java.sql.ResultSet;
+// import java.sql.ResultSetMetaData;
+// import java.sql.DatabaseMetaData;
 
 // import java.sql.DriverManager;
 // import java.sql.Connection;
@@ -48,10 +49,11 @@ public class building_dom{
 	
 	public static void main(String args[]){ 
 		try{
-			String filepath="C:\\Users\\Poshan\\Desktop\\building_id\\before_change.osm";
+			String filepath="C:\\Users\\Poshan\\Desktop\\building_id\\";
+			String file=filepath+"before_change.osm";
 			DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
 			DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
-			Document doc = docBuilder.parse(filepath);
+			Document doc = docBuilder.parse(file);
 			ArrayList<String> listkey = new ArrayList<String>();//array list that contains the keys
 			ArrayList<String> listvalue = new ArrayList<String>();// array list that contains the values
 
@@ -122,8 +124,9 @@ public class building_dom{
 		try {
 			System.out.println("yaha samma aayo hai");
 			Class.forName("org.sqlite.JDBC");  
+         	System.out.println("yaha samma pani aayo hai");
          	Connection connection = null;	
-         	connection = DriverManager.getConnection("jdbc:sqlite:C://Users/Poshan/Desktop/building_id/table_ko_name.db");
+         	connection = DriverManager.getConnection("jdbc:sqlite:table_ko_name.db");
 			System.out.println("sqlite JDBC Driver Registered!");
 			
 			// connection = DriverManager.getConnection("jdbc:sqlite:test.db");
