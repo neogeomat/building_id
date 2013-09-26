@@ -29,21 +29,7 @@ import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
 
 import java.sql.*;
-// import java.sql.Connection;
-// import java.sql.Statement;
-// import java.sql.DriverManager;
-// import java.sql.ResultSet;
-// import java.sql.ResultSetMetaData;
-// import java.sql.DatabaseMetaData;
 
-// import java.sql.DriverManager;
-// import java.sql.Connection;
-// import java.sql.SQLException;
-
-// public ArrayList<osmNode> osmNodes = new ArrayList<osmNode>();
-//     //public ArrayList<osmPolygon> osmPolygons = new ArrayList<osmPolygon>();
-//  public ArrayList<osmLine> osmLines = new ArrayList<osmLine>(),
-//      osmPolygons = new ArrayList<osmLine>();
 
 public class building_dom{
 	
@@ -55,27 +41,8 @@ public class building_dom{
 			DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
 			Document doc = docBuilder.parse(file);
 			ArrayList<String> listkey = new ArrayList<String>();//array list that contains the keys
-			ArrayList<String> listvalue = new ArrayList<String>();// array list that contains the values
-
-			// Node way = doc.getElementsByTagName("way").item(0);
-			// NamedNodeMap attributes = way.getAttributes();
-			// Node nodeAtrr = attributes.getNamedItem("");
-
-			// Element rootNode = doc.getRootElement();
-
-			// Element way = rootNode.getElementsByTagName("way");
-			
-			NodeList wayList = doc.getElementsByTagName("way");
-			
-			// HashSet collection = new HashSet ();
-			// for (int p = 0; p<wayList.getLength(); p++){
-			// 	//yaha samma correct 6
-			// 	System.out.println("yaha aai pugyo");
-			// 	// Node wNode1 = wayList.item(p);
-			// 	// Element eElement2 = (Element) wNode1;
-			// 	Element node = doc.createElement("tagg");
-			// 	node.setAttribute("attrib", "attrib_value"); //add an attribute may be district or ward or 
-			// }
+			ArrayList<String> listvalue = new ArrayList<String>();// array list that contains the values	
+			NodeList wayList = doc.getElementsByTagName("way");  //1. Nodelists of way
 			
 
 
@@ -85,7 +52,7 @@ public class building_dom{
 				String osm_id = eElement1.getAttribute("id");
 				NodeList childs = eElement1.getElementsByTagName("tag"); //list of nd and tags
 				// System.out.println("\n");
-				
+				data(osm_id);
 			
 				
 
@@ -94,27 +61,33 @@ public class building_dom{
 					Node childs_individual = childs.item(k); //either nd or tag node
 					Element e1=(Element) childs_individual;
 					// System.out.println((childs_individual.getNodeName()));
+
 					listkey.add(e1.getAttribute("k"));
+					
 					listvalue.add(e1.getAttribute("v"));
 					
 
-			}
-			}
+				}
+			
 			for (int l=0; l<listkey.size(); l++){
-				System.out.print(listkey.get(l)+"\t");
-				System.out.println(listvalue.get(l));
+				// System.out.print(listkey.get(l)+"\t");
+				if (listkey.get(l)=="building"){
+						System.out.println("the answer that could never be found");
+						// data(osm_id);
+					}
+				// System.out.println(listvalue.get(l));
 
 			}
 			// data("poshan");
 			
-			// System.out.println("Done");
+		}	// System.out.println("Done");
 			
 		}
 		
 		catch (Exception e){
 				e.printStackTrace();
 		}
-		data ("poshan");
+		
 	}
 	
 	
@@ -133,6 +106,7 @@ public class building_dom{
 			try{
 				if (connection != null){
 					System.out.println(s+"I love u");
+
 					
 				}
 			}
