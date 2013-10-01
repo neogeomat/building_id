@@ -34,6 +34,45 @@ import java.sql.*;
 public class building_dom{
 	
 	public static void main(String args[]){ 
+		try {
+			System.out.println("yaha samma aayo hai");
+			Class.forName("org.sqlite.JDBC");  
+         	// System.out.println("yaha samma pani aayo hai");
+         	Connection connection = null;	
+         	connection = DriverManager.getConnection("jdbc:sqlite:table_ko_name2.db");
+			// System.out.println("sqlite JDBC Driver Registered!");
+			
+			// connection = DriverManager.getConnection("jdbc:sqlite:test.db");
+			try{
+				if (connection != null){
+					// System.out.println(s+"is the building");
+					Statement st = connection.createStatement();
+					String sql = "CREATE TABLE database " +
+	                "(osmID INT PRIMARY KEY     NOT NULL," +
+	                " wayID          TEXT    NOT NULL, " +  
+	                " district       CHAR(50), " + 
+	                " vdc			CHAR(50), "+
+	                " ward         INT)"; 
+					st.executeUpdate(sql);
+					st.close();
+					
+					
+				}
+			}
+
+			catch (Exception e) {
+				System.out.println("Connection Failed! Check output console");
+				e.printStackTrace();
+				return;
+			}
+		}
+		catch (Exception e) {
+			System.out.println("Connection Failed! Check output console");
+			e.printStackTrace();
+			return;
+		}
+		
+
 		try{
 			String filepath="C:\\Users\\Poshan\\Desktop\\building_id\\";
 			String file=filepath+"before_change.osm";
@@ -52,41 +91,44 @@ public class building_dom{
 				String osm_id = eElement1.getAttribute("id");
 				NodeList childs = eElement1.getElementsByTagName("tag"); //list of nd and tags
 				// System.out.println("\n");
-				data(osm_id);
-			
-				
-
+				// data(osm_id);
+				listkey.clear();
+				listvalue.clear();
 				for (int k = 0 ; k < childs.getLength(); k++){
 					
-					Node childs_individual = childs.item(k); //either nd or tag node
-					Element e1=(Element) childs_individual;
+					Node childs_individual = childs.item(k); // single tag node
+					Element e1=(Element) childs_individual; //
 					// System.out.println((childs_individual.getNodeName()));
 
 					listkey.add(e1.getAttribute("k"));
-					
 					listvalue.add(e1.getAttribute("v"));
-					
 
 				}
-			
-			for (int l=0; l<listkey.size(); l++){
-				// System.out.print(listkey.get(l)+"\t");
-				if (listkey.get(l)=="building"){
-						System.out.println("the answer that could never be found");
-						// data(osm_id);
-					}
-				// System.out.println(listvalue.get(l));
 
+				for (int l=0; l<listkey.size(); l++){
+				// System.out.println("yaha samma aayo ni tah");
+				// System.out.print(listkey.get(l)+"\n");
+
+					
+					if (listkey.get(l).equals("building")){
+						// System.out.println("the answer that could never be found"+l);
+						data(osm_id);
+					}
+			
+			
+				}
+			
 			}
-			// data("poshan");
 			
-		}	// System.out.println("Done");
-			
+			// System.out.print(listkey.size());
 		}
-		
 		catch (Exception e){
 				e.printStackTrace();
 		}
+
+		
+		
+
 		
 	}
 	
@@ -95,45 +137,22 @@ public class building_dom{
 	public static void data(String s){
 		
 		try {
-			System.out.println("yaha samma aayo hai");
-			Class.forName("org.sqlite.JDBC");  
-         	System.out.println("yaha samma pani aayo hai");
-         	Connection connection = null;	
-         	connection = DriverManager.getConnection("jdbc:sqlite:table_ko_name.db");
-			System.out.println("sqlite JDBC Driver Registered!");
-			
-			// connection = DriverManager.getConnection("jdbc:sqlite:test.db");
-			try{
-				if (connection != null){
-					System.out.println(s+"I love u");
-
-					
-				}
-			}
-		// 	try{
-		// 		if (connection != null) {
-		// 			System.out.println("You made it, take control your database now!");
-		// 			Statement st = connection.createStatement();
-		// 			int val = st.executeUpdate("INSERT table1 VALUES("+i+","+"s"+")");
-		// 				// int val = st.executeUpdate("INSERT employee VALUES("+i+","+"'Aman'"+")");
-		// 				System.out.println("1 row affected");
-
-		// 		} 
-		// 		else {
-		// 			System.out.println("Failed to make connection!");
-		// 		}
-		// 		i=i+1;
-				catch (Exception e) {
-					System.out.println("Connection Failed! Check output console");
-					e.printStackTrace();
-					return;
-				}
-			}
-			catch (Exception e) {
-				System.out.println("Connection Failed! Check output console");
-				e.printStackTrace();
-				return;
-			}
+			//write code to insert osmid to dbase
+	      	Connection connection = null;	
+         	connection = DriverManager.getConnection("jdbc:sqlite:table_ko_name2.db");
+			Statement st = connection.createStatement();
+	      	String sql = "INSERT INTO database (osmID,wayID,district,vdc,ward) " +
+           	"VALUES (1, s, 'Kath', 'ktm', 2 );"; 
+      		st.executeUpdate(sql);
+      		st.close();
+	      	connection.commit();
+	      	
+		}
+		catch (Exception e) {
+			System.out.println("Connection Failed! Check output console");
+			e.printStackTrace();
+			return;
+		}
 
 	}
 		
