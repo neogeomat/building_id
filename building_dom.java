@@ -178,9 +178,12 @@ public class building_dom{
 		        "FROM database";
 			ResultSet rs = st.executeQuery(query);
 			ArrayList<Integer> unsortList = new ArrayList<Integer>(); 
+			ArrayList<String> wayidss = new ArrayList<String>();
 			int oid = 0;
 			while (rs.next()) {
 				int id = rs.getInt("oID");
+				String wid = rs.getString("wayID");
+				wayidss.add(wid);
 				unsortList.add(id);							//keeep the values in the oid in the table already present to the arraylist to determine hghest value
 			}
 			if(unsortList.isEmpty()){
@@ -198,7 +201,19 @@ public class building_dom{
 				oid = c + 1;
 			}									//highest value + 1
 	      	
+
+	      	//check if any of the items in the arraylist is equal to string passed from the function 
+	      	///////////////////////////////////////////////////////////////////////////Working
+	      	//to check whether the building's wayid is already registered or nots..............
+	      	for (int q = 0; q < wayidss.size(); q++){
+	      		if wayidss.get(q) == s{
+	      			//insert // suggestion is call the insertion function pass string s connection or declare
+	      		}
+	      	}
+			
+
 			String wid = s;
+
 	      	String sql = "INSERT INTO database (oID,wayID,district,vdc,ward) " +
            	"VALUES (" + oid + "," + wid + ", 'Kath', 'ktm', 2 );"; 
       		st.executeUpdate(sql);

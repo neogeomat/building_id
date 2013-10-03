@@ -83,7 +83,7 @@ public class building1{
 						else if(qName.equalsIgnoreCase("tag")){
 							withinTag = true;
 							String Key = attributes.getValue("k");
-							String Value = attributes.getValue("v");
+						n	String Value = attributes.getValue("v");
 							if (Key == "building"){
 									withinBuilding = true;
 									System.out.println("within building "+i);
