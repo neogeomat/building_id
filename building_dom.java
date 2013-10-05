@@ -84,8 +84,6 @@ public class building_dom{
 					Element eElement1 = (Element) wNode;   //inside a way tree
 					String osm_id = eElement1.getAttribute("id");
 					NodeList childs = eElement1.getElementsByTagName("tag"); //list of nd and tags
-					// System.out.println("\n");
-					// data(osm_id);
 					listkey.clear();
 					listvalue.clear();
 					HashMap kvpair = new HashMap();
@@ -163,19 +161,21 @@ public class building_dom{
 	      		"from psuedonumber "+
 	      		"where osmid = "+osmid;
 	      	ResultSet rs2 = st.executeQuery(check_existence_in_db);
-
-	      	System.out.println(kvpair.toString());
 	      	System.out.println("\n");
+	      	System.out.println(kvpair.toString());
+	      	// System.out.println("rs2="+rs2.next());
+	      	System.out.println("district="+kvpair.get("kll:district"));
+	      	if (!rs2.next() ) {
+	      		int newid=0;
+	      		String highest_no_query= "select max(osmid) from (select osmid from psuedonumber where district='"+kvpair.get("kll:district")+"' and vdc='"+kvpair.get("kll:vdc")+"' and ward='"+kvpair.get("kll:ward")+"')";
 
-	      	
-	      	// if (!rs2.next() ) {
-	      	// 	int newid;
 	      	// 	String sql = "INSERT INTO psuedonumber (newid,osmid,district,vdc,ward) VALUES (" + newid + "," + osmid + ", 'kathmandu', 'kmpc', 4 )"; 
-      		// 	st.executeUpdate(sql);
-      		// 	System.out.println("inserted"+newid);
+      			ResultSet highest_no_returned = st.executeQuery(highest_no_query);
+      			System.out.println(highest_no_returned.getInt("max(osmid)"));
+      			// System.out.println(highest_no);
       		// // connection.commit();
       		// 	st.close();
-	      	// 	}	
+	      	}	
 	      	
 		}
 		catch (Exception e) {
