@@ -30,52 +30,54 @@ import org.xml.sax.helpers.DefaultHandler;
 
 import java.sql.*;
 
+import java.util.HashMap;
+import java.util.Map;
+
 
 public class building_dom{
 	
 	public static void main(String args[]){ 
 		try {
-			// System.out.println("yaha samma aayo hai");
 			Class.forName("org.sqlite.JDBC");  
-         	// System.out.println("yaha samma pani aayo hai");
          	Connection connection = null;	
-         	connection = DriverManager.getConnection("jdbc:sqlite:table_ko_name4.db");
-			// System.out.println("sqlite JDBC Driver Registered!");
-			
-			// connection = DriverManager.getConnection("jdbc:sqlite:test.db");
-			// try{
-			// 	if (connection != null){
-			// 		// System.out.println(s+"is the building");
-			// 		Statement st = connection.createStatement();
-			// 		String sql = "CREATE TABLE database " +
-	  //               "(osmID INT PRIMARY KEY     NOT NULL," +
-	  //               " wayID          TEXT    NOT NULL, " +  
-	  //               " district       CHAR(50), " + 
-	  //               " vdc			CHAR(50), "+
-	  //               " ward         INT)"; 
-			// 		st.executeUpdate(sql);
-			// 		st.close();
-					
-					
-			// 	}
-			// }
-
-			// catch (Exception e) {
-			// 	System.out.println("Connection Failed! Check output console");
-			// 	e.printStackTrace();
-			// 	return;
-			// }
+         	connection = DriverManager.getConnection("jdbc:sqlite:dev_db.db");
+         	DatabaseMetaData dbm = connection.getMetaData();
+			ResultSet tables = dbm.getTables(null, null, "psuedonumber", null); // check if "psuedonumber" table is there
+			if (!(tables.next())) {
+				try{
+					if (connection != null){
+						Statement st = connection.createStatement();
+						String createtable = "CREATE TABLE psuedonumber " +
+						                " (osmid    CHAR(50) NOT NULL," +  	                
+						                " district  CHAR(50)," + 
+						                " vdc		CHAR(50),"+
+						                " ward      INT," +
+										" newid     INT      NOT NULL)"; 
+						st.executeUpdate(createtable);
+						System.out.println("TABLE CREATED");
+						st.close();
+					}
+					else{
+						System.out.println("TABLE EXISTS");	
+					}
+				}
+				catch (Exception e) {
+					System.out.println("TABLE CREATION FAILED");
+					e.printStackTrace();
+					return;
+				}
+			}
+	      	
 			try{
-				String filepath="C:\\Users\\Poshan\\Desktop\\building_id\\";
+				String filepath="";
+				// String filepath="C:\\Users\\Poshan\\Desktop\\building_id\\";
 				String file=filepath+"before_change.osm";
 				DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
 				DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
 				Document doc = docBuilder.parse(file);
 				ArrayList<String> listkey = new ArrayList<String>();//array list that contains the keys
 				ArrayList<String> listvalue = new ArrayList<String>();// array list that contains the values	
-				NodeList wayList = doc.getElementsByTagName("way");  //1. Nodelists of way
-				
-
+				NodeList wayList = doc.getElementsByTagName("way");  // Nodelists of way
 
 				for (int i=0 ; i<wayList.getLength(); i++){
 					Node wNode = wayList.item(i);
@@ -86,38 +88,30 @@ public class building_dom{
 					// data(osm_id);
 					listkey.clear();
 					listvalue.clear();
+					HashMap kvpair = new HashMap();
 					for (int k = 0 ; k < childs.getLength(); k++){
-						
 						Node childs_individual = childs.item(k); // single tag node
 						Element e1=(Element) childs_individual; //
 						// System.out.println((childs_individual.getNodeName()));
-
 						listkey.add(e1.getAttribute("k"));
+						// System.out.println(listkey);
 						listvalue.add(e1.getAttribute("v"));
-
+						// System.out.println(listvalue);
+						kvpair.put(e1.getAttribute("k"),e1.getAttribute("v")); //dict of keys and values
 					}
 
-					for (int l=0; l<listkey.size(); l++){
-					// System.out.println("yaha samma aayo ni tah");
-					// System.out.print(listkey.get(l)+"\n");
-
-						
+					for (int l=0; l<listkey.size(); l++){						
 						if (listkey.get(l).equals("building")){
 							// System.out.println("the answer that could never be found"+l);
-							data(osm_id, connection);
+							data(osm_id, connection, kvpair);
 						}
-				
-				
 					}
-				
 				}
 				// System.out.print(listkey.size());
 			}
 			catch (Exception e){
 				e.printStackTrace();
 			}
-
-
 		}
 		catch (Exception e) {
 			System.out.println("Connection Failed! Check output console");
@@ -127,101 +121,63 @@ public class building_dom{
 		
 	}
 	
-	
-
-	public static void data(String s, Connection a){
+	public static void data(String osmid, Connection a, HashMap kvpair){
 		
 		try {
-			//instead check if (database) and table exists or not at first and then make a connection here and create a table and database connection here for the first tyme and for 
+			//instead check if (psuedonumber) and table exists or not at first and then make a connection here and create a table and database connection here for the first tyme and for 
 			//nothing for the ones except for first time tables will already be there and then write in database so every time it checks whether database and table exists or not 
 			//and creates one if not  and if yes only writes the passed valuess to the database.
 
 	      	Connection connection = a;	
-         	// connection = DriverManager.getConnection("jdbc:sqlite:table_ko_name2.db");
 			Statement st = connection.createStatement();
-			DatabaseMetaData dbm = connection.getMetaData();
-			ResultSet tables = dbm.getTables(null, null, "database", null); // check if "database" table is there
-			if (!(tables.next())) {
-				try{
-					if (connection != null){
-						// System.out.println(s+"is the building");
-						// Statement st = connection.createStatement();
-						// String sql1 = "CREATE TABLE database " +
-		    //             "(oID INT PRIMARY KEY     NOT NULL," +
-		    //             " wayID          CHAR(50)    NOT NULL, " +  
-		    //             " district       CHAR(50), " + 
-		    //             " vdc			CHAR(50), "+
-		    //             " ward         INT)"; 
-						String sql1 = "CREATE TABLE database " +
-		                "(oID INT      NOT NULL," +
-		                " wayID          CHAR(50)    NOT NULL, " +  
-		                " district       CHAR(50), " + 
-		                " vdc			CHAR(50), "+
-		                " ward         INT)"; 
-						st.executeUpdate(sql1);
-						st.close();
-						
-						
-					}
-				}
-				catch (Exception e) {
-					System.out.println("Connection Failed! Check output console");
-					e.printStackTrace();
-					return;
-				}
-			}
-	      	
-
 	      	// check the value of to be given osmID(new one) in the table for the highest value and then give the value+1
-		    String query =
-		        "SELECT * " +
-		        "FROM database";
-			ResultSet rs = st.executeQuery(query);
-			ArrayList<Integer> unsortList = new ArrayList<Integer>(); 
-			// ArrayList<String> wayidss = new ArrayList<String>();
-			int oid = 0;
-			while (rs.next()) {
-				int id = rs.getInt("oID");
-				// String wid = rs.getString("wayID");
-				// wayidss.add(wid);
-				unsortList.add(id);							//keeep the values in the oid in the table already present to the arraylist to determine hghest value
-			}
-			if(unsortList.isEmpty()){
-				oid = 1;
+		 //    String query =
+		 //        "SELECT * " +
+		 //        "FROM psuedonumber";
+			// ResultSet rs = st.executeQuery(query);
+			// ArrayList<Integer> unsortList = new ArrayList<Integer>(); 
+			// // ArrayList<String> wayidss = new ArrayList<String>();
+			// int newid = 0;
+			// while (rs.next()) {
+			// 	int id = rs.getInt("newid");
+			// 	// String osmid = rs.getString("osmid");
+			// 	// wayidss.add(osmid);
+			// 	unsortList.add(id);							//keeep the values in the newid in the table already present to the arraylist to determine hghest value
+			// }
+			// if(unsortList.isEmpty()){
+			// 	newid = 1;
 
-			}
-			else{
-				int c = unsortList.get(0);
-				for (int i = 1; i < unsortList.size(); i++){      //sorting the values of oids already present and determinin the highest value
-					int b = unsortList.get(i);
-					if (b < c){
-						c = b;
-					}
-				}
-				oid = c + 1;
-			}									//highest value + 1
+			// }
+			// else{
+			// 	int c = unsortList.get(0);
+			// 	for (int i = 1; i < unsortList.size(); i++){      //sorting the values of oids already present and determinin the highest value
+			// 		int b = unsortList.get(i);
+			// 		if (b < c){
+			// 			c = b;
+			// 		}
+			// 	}
+			// 	newid = c + 1;
+			// }									//highest value + 1
 	      	
-	      	String query2 = "select * "+
-	      		"from database "+
-	      		"where wayID = "+s;
-	      	ResultSet rs2 = st.executeQuery(query2);
+	      	String check_existence_in_db = "select osmid "+
+	      		"from psuedonumber "+
+	      		"where osmid = "+osmid;
+	      	ResultSet rs2 = st.executeQuery(check_existence_in_db);
 
+	      	System.out.println(kvpair.toString());
+	      	System.out.println("\n");
 
-	      	//check if any of the items in the arraylist is equal to string passed from the function 
-	      	///////////////////////////////////////////////////////////////////////////Working
-	      	//to check whether the building's wayid is already registered or nots..............
-	      	if (!rs2.next() ) {
-	      		String wid = s;
-	      		String sql = "INSERT INTO database (oID,wayID,district,vdc,ward) " +
-           		"VALUES (" + oid + "," + wid + ", 'Kath', 'ktm', 2 );"; 
-      			st.executeUpdate(sql);
-      		// connection.commit();
-      			st.close();
-	      		}	
+	      	
+	      	// if (!rs2.next() ) {
+	      	// 	int newid;
+	      	// 	String sql = "INSERT INTO psuedonumber (newid,osmid,district,vdc,ward) VALUES (" + newid + "," + osmid + ", 'kathmandu', 'kmpc', 4 )"; 
+      		// 	st.executeUpdate(sql);
+      		// 	System.out.println("inserted"+newid);
+      		// // connection.commit();
+      		// 	st.close();
+	      	// 	}	
 	      	
 		}
-		
-
 		catch (Exception e) {
 			System.out.println("Connection Failed! Check output console");
 			e.printStackTrace();
