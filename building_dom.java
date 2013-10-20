@@ -168,14 +168,14 @@ public class building_dom{
 	      		"where osmid = "+osmid;
 	      	ResultSet rs2 = st.executeQuery(check_existence_in_db);
 	      	System.out.println("\n");
-	      	System.out.println(kvpair.toString());
+	      	// System.out.println(kvpair.toString());
 	      	// System.out.println("rs2="+rs2.next());
-	      	System.out.println("district="+kvpair.get("kll:district"));
-	      	if (!rs2.next() ) {
+	      	// System.out.println("district="+kvpair.get("kll:district"));
+	      	if (!rs2.next() ) {		//this means the osmid is was not found in db
 	      		int new_id=0;
 	      		String highest_no_query= "select max(osmid) from (select osmid from psuedonumber where district='"+kvpair.get("kll:district")+"' and vdc='"+kvpair.get("kll:vdc")+"' and ward='"+kvpair.get("kll:ward")+"')";
 
-	      	// 	String sql = "INSERT INTO psuedonumber (new_id,osmid,district,vdc,ward) VALUES (" + new_id + "," + osmid + ", 'kathmandu', 'kmpc', 4 )"; 
+	      	// 	String sql = "INSERT INTO psuedonumber (osmid,district,vdc,ward,new_id) VALUES (" + new_id + "," + osmid + ", 'kathmandu', 'kmpc', 4 )"; 
       			ResultSet highest_no_returned = st.executeQuery(highest_no_query);
       			System.out.println(highest_no_returned.getInt("max(osmid)"));
       			// System.out.println(highest_no);
