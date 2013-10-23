@@ -40,7 +40,7 @@ public class building_dom{
 		try {
 			Class.forName("org.sqlite.JDBC");  
          	Connection connection = null;	
-         	connection = DriverManager.getConnection("jdbc:sqlite:dev_db.db");
+         	connection = DriverManager.getConnection("jdbc:sqlite:realtest_db.db");
          	DatabaseMetaData dbm = connection.getMetaData();
 			ResultSet tables = dbm.getTables(null, null, "new_psuedonumber", null); // check if "new_psuedonumber" table is there
 			if (!(tables.next())) {
@@ -56,13 +56,13 @@ public class building_dom{
 										" id_from_field CHAR(15),"+
 										" upload_date DATETIME,"+
 										" changeset INT)"; 
-						System.out.println(createtable);
+						// System.out.println(createtable);
 						st.executeUpdate(createtable);
-						System.out.println("TABLE CREATED");
+						System.out.println("TABLE psuedonumber CREATED");
 						st.close();
 					}
 					else{
-						System.out.println("TABLE EXISTS");	
+						System.out.println("TABLE psuedonumber EXISTS");	
 					}
 				}
 				catch (Exception e) {
@@ -105,13 +105,26 @@ public class building_dom{
 						kvpair.put(e1.getAttribute("k"),e1.getAttribute("v")); //dict of keys and values
 					}
 
-					for (int l=0; l<listkey.size(); l++){						
+					int c=0;
+					for (int l=0; l<listkey.size(); l++){
 						if (listkey.get(l).equals("building")){
-							// System.out.println("the answer that could never be found"+l);
-							data(osm_id, connection, kvpair);
+							c = c+1;
+						}
+						if (listkey.get(l).equals("kll:district")){
+							c = c+1;
+						}
+						if (listkey.get(l).equals("kll:vdc")){
+							c = c+1;
+						}
+						if (listkey.get(l).equals("kll:ward")){
+							c = c+1;
 						}
 					}
+					if(c==4){
+						data(osm_id, connection, kvpair);
+					}
 				}
+				System.out.print("No Errors Operation Successful");
 				// System.out.print(listkey.size());
 			}
 			catch (Exception e){
@@ -167,19 +180,21 @@ public class building_dom{
 	      		"from psuedonumber "+
 	      		"where osmid = "+osmid;
 	      	ResultSet rs2 = st.executeQuery(check_existence_in_db);
-	      	System.out.println("\n");
+	      	// System.out.println("\n");
 	      	// System.out.println(kvpair.toString());
 	      	// System.out.println("rs2="+rs2.next());
 	      	// System.out.println("district="+kvpair.get("kll:district"));
 	      	if (!rs2.next() ) {		//this means the osmid is was not found in db
 	      		int new_id=0;
 	      		String highest_no_query= "select max(osmid) from (select osmid from psuedonumber where district='"+kvpair.get("kll:district")+"' and vdc='"+kvpair.get("kll:vdc")+"' and ward='"+kvpair.get("kll:ward")+"')";
-
-	      	// 	String sql = "INSERT INTO psuedonumber (osmid,district,vdc,ward,new_id) VALUES (" + new_id + "," + osmid + ", 'kathmandu', 'kmpc', 4 )"; 
-      			ResultSet highest_no_returned = st.executeQuery(highest_no_query);
-      			System.out.println(highest_no_returned.getInt("max(osmid)"));
-      			// System.out.println(highest_no);
-      		// // connection.commit();
+	      		ResultSet highest_no_returned = st.executeQuery(highest_no_query);
+	      		new_id = highest_no_returned.getInt("max(osmid)") + 1;
+	      		String insert_sql = "INSERT INTO psuedonumber (osmid,district,vdc,ward,new_id) VALUES (" + osmid + ",\'" + kvpair.get("kll:district") + "\',\'" + kvpair.get("kll:vdc") + "\'," + kvpair.get("kll:ward") + ","  + new_id + ")"; 
+      			
+      			System.out.println(insert_sql);
+      			st.executeUpdate(insert_sql);
+      			System.out.println("Insert successful for building"+osmid);
+      			// connection.commit();
       		// 	st.close();
 	      	}
 		}
