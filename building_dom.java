@@ -40,7 +40,7 @@ public class building_dom{
 		try {
 			Class.forName("org.sqlite.JDBC");  
          	Connection connection = null;	
-         	connection = DriverManager.getConnection("jdbc:sqlite:realtest_db.db");
+         	connection = DriverManager.getConnection("jdbc:sqlite:realtest2_db.db");
          	DatabaseMetaData dbm = connection.getMetaData();
 			ResultSet tables = dbm.getTables(null, null, "new_psuedonumber", null); // check if "new_psuedonumber" table is there
 			if (!(tables.next())) {
@@ -186,9 +186,10 @@ public class building_dom{
 	      	// System.out.println("district="+kvpair.get("kll:district"));
 	      	if (!rs2.next() ) {		//this means the osmid is was not found in db
 	      		int new_id=0;
-	      		String highest_no_query= "select max(osmid) from (select osmid from psuedonumber where district='"+kvpair.get("kll:district")+"' and vdc='"+kvpair.get("kll:vdc")+"' and ward='"+kvpair.get("kll:ward")+"')";
+	      		String highest_no_query= "select max(new_id) from (select new_id from psuedonumber where district='"+kvpair.get("kll:district")+"' and vdc='"+kvpair.get("kll:vdc")+"' and ward='"+kvpair.get("kll:ward")+"')";
 	      		ResultSet highest_no_returned = st.executeQuery(highest_no_query);
-	      		new_id = highest_no_returned.getInt("max(osmid)") + 1;
+	      		System.out.println(highest_no_returned.getInt("max(new_id)"));
+	      		new_id = highest_no_returned.getInt("max(new_id)") + 1;
 	      		String insert_sql = "INSERT INTO psuedonumber (osmid,district,vdc,ward,new_id) VALUES (" + osmid + ",\'" + kvpair.get("kll:district") + "\',\'" + kvpair.get("kll:vdc") + "\'," + kvpair.get("kll:ward") + ","  + new_id + ")"; 
       			
       			System.out.println(insert_sql);
@@ -196,6 +197,9 @@ public class building_dom{
       			System.out.println("Insert successful for building"+osmid);
       			// connection.commit();
       		// 	st.close();
+	      	}
+	      	else{
+	      		System.out.println("Record exists in db");
 	      	}
 		}
 		catch (Exception e) {
