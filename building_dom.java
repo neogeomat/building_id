@@ -176,7 +176,7 @@ public class building_dom{
 			// 	new_id = c + 1;
 			// }									//highest value + 1
 	      	
-	      	String check_existence_in_db = "select osmid "+
+	      	String check_existence_in_db = "select osmid,id_from_field "+
 	      		"from psuedonumber "+
 	      		"where osmid = "+osmid;
 	      	ResultSet rs2 = st.executeQuery(check_existence_in_db);
@@ -199,6 +199,11 @@ public class building_dom{
       		// 	st.close();
 	      	}
 	      	else{
+	      		/* update psuedonumber set id_from_field = "04-10-07-02" where osmid = 241110468 */
+	      		if(rs2.getString("id_from_field") != kvpair.get("kll:oid")){
+	      			String update_id_from_field = "update psuedonumber set id_from_field = \""+kvpair.get("kll:oid")+"\" where osmid = " + osmid;
+	      			st.executeUpdate(update_id_from_field);
+	      		}
 	      		System.out.println("Record exists in db");
 	      	}
 		}
