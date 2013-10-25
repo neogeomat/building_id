@@ -75,7 +75,7 @@ public class building_dom{
 			try{
 				// need an interface to choose file
 				String filepath="";
-				String file=filepath+"before_change.osm";
+				String file=filepath+"after_change.osm";
 
 				DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
 				DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
@@ -193,16 +193,23 @@ public class building_dom{
 	      		String insert_sql = "INSERT INTO psuedonumber (osmid,district,vdc,ward,new_id) VALUES (" + osmid + ",\'" + kvpair.get("kll:district") + "\',\'" + kvpair.get("kll:vdc") + "\'," + kvpair.get("kll:ward") + ","  + new_id + ")"; 
       			
       			System.out.println(insert_sql);
-      			st.executeUpdate(insert_sql);
+      			// st.executeUpdate(insert_sql);
       			System.out.println("Insert successful for building"+osmid);
       			// connection.commit();
       		// 	st.close();
 	      	}
 	      	else{
 	      		/* update psuedonumber set id_from_field = "04-10-07-02" where osmid = 241110468 */
-	      		if(rs2.getString("id_from_field") != kvpair.get("kll:oid")){
-	      			String update_id_from_field = "update psuedonumber set id_from_field = \""+kvpair.get("kll:oid")+"\" where osmid = " + osmid;
-	      			st.executeUpdate(update_id_from_field);
+	      		
+	      		// System.out.println("id_from_field "+rs2.getString("id_from_field"));
+	      		// System.out.println((kvpair.get("kll:oid")).equals(rs2.getString("id_from_field")));
+	      		
+	      		if(kvpair.get("kll:oid") != null){
+		      		if(!(kvpair.get("kll:oid")).equals(rs2.getString("id_from_field"))){
+		      			String update_id_from_field = "update psuedonumber set id_from_field = \""+kvpair.get("kll:oid")+"\" where osmid = " + osmid;
+		      			st.executeUpdate(update_id_from_field);
+		      			System.out.println("record id_from_field updated in "+osmid);
+		      		}
 	      		}
 	      		System.out.println("Record exists in db");
 	      	}
